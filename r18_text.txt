@@ -1,0 +1,3550 @@
+﻿
+
+
+
+
+
+
+
+:root{--litepicker-container-months-color-bg: #fff;--litepicker-container-months-box-shadow-color: #ddd;--litepicker-footer-color-bg: #fafafa;--litepicker-footer-box-shadow-color: #ddd;--litepicker-tooltip-color-bg: #fff;--litepicker-month-header-color: #333;--litepicker-button-prev-month-color: #9e9e9e;--litepicker-button-next-month-color: #9e9e9e;--litepicker-button-prev-month-color-hover: #2196f3;--litepicker-button-next-month-color-hover: #2196f3;--litepicker-month-width: calc(var(--litepicker-day-width) * 7);--litepicker-month-weekday-color: #9e9e9e;--litepicker-month-week-number-color: #9e9e9e;--litepicker-day-width: 38px;--litepicker-day-color: #333;--litepicker-day-color-hover: #2196f3;--litepicker-is-today-color: #f44336;--litepicker-is-in-range-color: #bbdefb;--litepicker-is-locked-color: #9e9e9e;--litepicker-is-start-color: #fff;--litepicker-is-start-color-bg: #2196f3;--litepicker-is-end-color: #fff;--litepicker-is-end-color-bg: #2196f3;--litepicker-button-cancel-color: #fff;--litepicker-button-cancel-color-bg: #9e9e9e;--litepicker-button-apply-color: #fff;--litepicker-button-apply-color-bg: #2196f3;--litepicker-button-reset-color: #909090;--litepicker-button-reset-color-hover: #2196f3;--litepicker-highlighted-day-color: #333;--litepicker-highlighted-day-color-bg: #ffeb3b}.show-week-numbers{--litepicker-month-width: calc(var(--litepicker-day-width) * 8)}.litepicker{font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;font-size:0.8em;display:none}.litepicker button{border:none;background:none}.litepicker .container__main{display:-webkit-box;display:-ms-flexbox;display:flex}.litepicker .container__months{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;background-color:var(--litepicker-container-months-color-bg);border-radius:5px;-webkit-box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);width:calc(var(--litepicker-month-width) + 10px);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months.columns-2{width:calc((var(--litepicker-month-width) * 2) + 20px)}.litepicker .container__months.columns-3{width:calc((var(--litepicker-month-width) * 3) + 30px)}.litepicker .container__months.columns-4{width:calc((var(--litepicker-month-width) * 4) + 40px)}.litepicker .container__months.split-view .month-item-header .button-previous-month,.litepicker .container__months.split-view .month-item-header .button-next-month{visibility:visible}.litepicker .container__months .month-item{padding:5px;width:var(--litepicker-month-width);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months .month-item-header{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;font-weight:500;padding:10px 5px;text-align:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:var(--litepicker-month-header-color)}.litepicker .container__months .month-item-header div{-webkit-box-flex:1;-ms-flex:1;flex:1}.litepicker .container__months .month-item-header div>.month-item-name{margin-right:5px}.litepicker .container__months .month-item-header div>.month-item-year{padding:0}.litepicker .container__months .month-item-header .reset-button{color:var(--litepicker-button-reset-color)}.litepicker .container__months .month-item-header .reset-button>svg{fill:var(--litepicker-button-reset-color)}.litepicker .container__months .month-item-header .reset-button *{pointer-events:none}.litepicker .container__months .month-item-header .reset-button:hover{color:var(--litepicker-button-reset-color-hover)}.litepicker .container__months .month-item-header .reset-button:hover>svg{fill:var(--litepicker-button-reset-color-hover)}.litepicker .container__months .month-item-header .button-previous-month,.litepicker .container__months .month-item-header .button-next-month{visibility:hidden;text-decoration:none;padding:3px 5px;border-radius:3px;-webkit-transition:color 0.3s, border 0.3s;transition:color 0.3s, border 0.3s;cursor:default}.litepicker .container__months .month-item-header .button-previous-month *,.litepicker .container__months .month-item-header .button-next-month *{pointer-events:none}.litepicker .container__months .month-item-header .button-previous-month{color:var(--litepicker-button-prev-month-color)}.litepicker .container__months .month-item-header .button-previous-month>svg,.litepicker .container__months .month-item-header .button-previous-month>img{fill:var(--litepicker-button-prev-month-color)}.litepicker .container__months .month-item-header .button-previous-month:hover{color:var(--litepicker-button-prev-month-color-hover)}.litepicker .container__months .month-item-header .button-previous-month:hover>svg{fill:var(--litepicker-button-prev-month-color-hover)}.litepicker .container__months .month-item-header .button-next-month{color:var(--litepicker-button-next-month-color)}.litepicker .container__months .month-item-header .button-next-month>svg,.litepicker .container__months .month-item-header .button-next-month>img{fill:var(--litepicker-button-next-month-color)}.litepicker .container__months .month-item-header .button-next-month:hover{color:var(--litepicker-button-next-month-color-hover)}.litepicker .container__months .month-item-header .button-next-month:hover>svg{fill:var(--litepicker-button-next-month-color-hover)}.litepicker .container__months .month-item-weekdays-row{display:-webkit-box;display:-ms-flexbox;display:flex;justify-self:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;color:var(--litepicker-month-weekday-color)}.litepicker .container__months .month-item-weekdays-row>div{padding:5px 0;font-size:85%;-webkit-box-flex:1;-ms-flex:1;flex:1;width:var(--litepicker-day-width);text-align:center}.litepicker .container__months .month-item:first-child .button-previous-month{visibility:visible}.litepicker .container__months .month-item:last-child .button-next-month{visibility:visible}.litepicker .container__months .month-item.no-previous-month .button-previous-month{visibility:hidden}.litepicker .container__months .month-item.no-next-month .button-next-month{visibility:hidden}.litepicker .container__days{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;justify-self:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:center;-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__days>div,.litepicker .container__days>a{padding:5px 0;width:var(--litepicker-day-width)}.litepicker .container__days .day-item{color:var(--litepicker-day-color);text-align:center;text-decoration:none;border-radius:3px;-webkit-transition:color 0.3s, border 0.3s;transition:color 0.3s, border 0.3s;cursor:default}.litepicker .container__days .day-item:hover{color:var(--litepicker-day-color-hover);-webkit-box-shadow:inset 0 0 0 1px var(--litepicker-day-color-hover);box-shadow:inset 0 0 0 1px var(--litepicker-day-color-hover)}.litepicker .container__days .day-item.is-today{color:var(--litepicker-is-today-color)}.litepicker .container__days .day-item.is-locked{color:var(--litepicker-is-locked-color)}.litepicker .container__days .day-item.is-locked:hover{color:var(--litepicker-is-locked-color);-webkit-box-shadow:none;box-shadow:none;cursor:default}.litepicker .container__days .day-item.is-in-range{background-color:var(--litepicker-is-in-range-color);border-radius:0}.litepicker .container__days .day-item.is-start-date{color:var(--litepicker-is-start-color);background-color:var(--litepicker-is-start-color-bg);border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:0;border-bottom-right-radius:0}.litepicker .container__days .day-item.is-start-date.is-flipped{border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-end-date{color:var(--litepicker-is-end-color);background-color:var(--litepicker-is-end-color-bg);border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-end-date.is-flipped{border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:0;border-bottom-right-radius:0}.litepicker .container__days .day-item.is-start-date.is-end-date{border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-highlighted{color:var(--litepicker-highlighted-day-color);background-color:var(--litepicker-highlighted-day-color-bg)}.litepicker .container__days .week-number{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;color:var(--litepicker-month-week-number-color);font-size:85%}.litepicker .container__footer{text-align:right;padding:10px 5px;margin:0 5px;background-color:var(--litepicker-footer-color-bg);-webkit-box-shadow:inset 0px 3px 3px 0px var(--litepicker-footer-box-shadow-color);box-shadow:inset 0px 3px 3px 0px var(--litepicker-footer-box-shadow-color);border-bottom-left-radius:5px;border-bottom-right-radius:5px}.litepicker .container__footer .preview-date-range{margin-right:10px;font-size:90%}.litepicker .container__footer .button-cancel{background-color:var(--litepicker-button-cancel-color-bg);color:var(--litepicker-button-cancel-color);border:0;padding:3px 7px 4px;border-radius:3px}.litepicker .container__footer .button-cancel *{pointer-events:none}.litepicker .container__footer .button-apply{background-color:var(--litepicker-button-apply-color-bg);color:var(--litepicker-button-apply-color);border:0;padding:3px 7px 4px;border-radius:3px;margin-left:10px;margin-right:10px}.litepicker .container__footer .button-apply:disabled{opacity:0.7}.litepicker .container__footer .button-apply *{pointer-events:none}.litepicker .container__tooltip{position:absolute;margin-top:-4px;padding:4px 8px;border-radius:4px;background-color:var(--litepicker-tooltip-color-bg);-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.25);box-shadow:0 1px 3px rgba(0,0,0,0.25);white-space:nowrap;font-size:11px;pointer-events:none;visibility:hidden}.litepicker .container__tooltip:before{position:absolute;bottom:-5px;left:calc(50% - 5px);border-top:5px solid rgba(0,0,0,0.12);border-right:5px solid transparent;border-left:5px solid transparent;content:""}.litepicker .container__tooltip:after{position:absolute;bottom:-4px;left:calc(50% - 4px);border-top:4px solid var(--litepicker-tooltip-color-bg);border-right:4px solid transparent;border-left:4px solid transparent;content:""}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-62875604-1');
+
+
+
+
+繧医￥讀懃ｴ｢縺輔ｌ縺ｦ縺・ｋ繝励Ο繝ｳ繝励ヨ・・18・・/title>
+
+
+
+dskjal
+
+
+
+
+
+
+
+繧医￥讀懃ｴ｢縺輔ｌ縺ｦ縺・ｋ繝励Ο繝ｳ繝励ヨ・・18・・/h1>            
+繧ｫ繝・ざ繝ｪ・・a href="https://dskjal.com/deeplearning/index000000.html">deeplearning
+
+            
+繧医ｊ隧ｳ邏ｰ縺ｪ繧ｿ繧ｰ讀懃ｴ｢縺ｯ
+ Danbooru 繧ｿ繧ｰ讀懃ｴ｢
+繧剃ｽｿ縺・・/p>
+逶ｮ谺｡
+
+
+
+
+
+菴謎ｽ阪・繝励Ξ繧､
+
+
+
+窶・ｹｳ邉ｻ繝励Ξ繧､
+
+
+
+窶・ｺ御ｺｺ
+
+
+
+窶・､・焚莠ｺ
+
+
+
+窶・・繝ｼ繧ｺ
+
+
+
+窶・ｰｻ邉ｻ菴謎ｽ・/a>
+
+
+窶・撼謖ｿ蜈･邉ｻ菴謎ｽ・/a>
+
+
+窶・が繝翫ル繝ｼ螂ｳ
+
+
+
+窶・ヵ繧ｧ繝ｩ繝ｻ繧､繝ｩ繝槭メ繧ｪ繝ｻ繧ｭ繧ｹ
+
+
+
+繧ｨ繝ｭ陦｣陬・/a>
+
+
+窶・・霄ｫ
+
+
+
+窶・ｸ雁濠霄ｫ
+
+
+
+窶・ｸ句濠霄ｫ
+
+
+
+繝上Φ繝峨し繧､繝ｳ
+
+
+
+逕ｷ
+
+
+
+繝壹ル繧ｹ
+
+
+
+邊ｾ豸ｲ
+
+
+
+諢帶ｶｲ
+
+
+
+隗ｦ謇・/a>
+
+
+豺ｫ邏・/a>
+
+
+繝舌う繝悶・繝・ぅ繝ｫ繝・/a>
+
+
+縺翫＠縺｣縺薙・謾ｾ蟆ｿ繝ｻ縺翫ｂ繧峨＠
+
+
+
+
+
+
+
+螂ｳ諤ｧ蝎ｨ
+
+
+
+窶・￥縺ｱ縺・/a>
+
+
+繧｢繝後せ繝ｻ蟆ｻ遨ｴ
+
+
+
+蟆ｻ
+
+
+
+荵ｳ
+
+
+
+窶・ｹｳ鬥・/a>
+
+
+窶・ヴ繧｢繧ｹ
+
+
+
+窶・ｹｳ蜍穂ｽ・/a>
+
+
+閧ｩ
+
+
+
+閻・/a>
+
+
+閻ｹ
+
+
+
+譛・/a>
+
+
+諡俶據
+
+
+
+繧ｪ繝幃｡・/a>
+
+
+鬥也ｵ槭ａ
+
+
+
+繧ｹ繝槭・蜀咏悄
+
+
+
+繧｢繝ｳ繧ｰ繝ｫ
+
+
+
+逕ｻ隗・/a>
+
+
+繝ｩ繧､繝・ぅ繝ｳ繧ｰ
+
+
+
+繧ｨ繝輔ぉ繧ｯ繝・/a>
+
+
+窶・・繧ｹ繝医お繝輔ぉ繧ｯ繝・/a>
+
+
+
+
+@media screen and (min-width: 600px) {	.responsive {		display:flex;	}}
+
+
+
+菴謎ｽ阪・繝励Ξ繧､
+
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+豁｣蟶ｸ菴・/td>
+missionary
+
+
+
+螂ｳ縺碁ｦｬ荵励ｊ
+騾・ｭ｣蟶ｸ菴・/td>
+girl on top, cowgirl position
+
+
+
+窶・レ髱｢鬨惹ｹ嶺ｽ・/td>
+reverse cowgirl position
+
+
+
+蛛ｴ菴・/td>
+spooning, on side
+
+
+
+莉ｰ蜷代￠
+
+on back
+
+
+
+縺・▽莨上○
+
+on stomach
+
+
+
+蟇ｾ髱｢蠎ｧ菴・/td>
+upright straddle
+
+
+
+窶・・レ髱｢蠎ｧ菴・/td>
+reverse upright straddle
+
+
+
+蟇ｾ髱｢菴謎ｽ・br>遶九■繝舌ャ繧ｯ
+迚・ｶｳ荳翫￡閭碁擇遶倶ｽ・/td>
+standing sex
+
+
+
+縺ｾ繧薙＄繧願ｿ斐＠
+
+folded, legs up
+
+
+
+螂･縺ｾ縺ｧ謖ｿ蜈･
+豺ｱ縺・諺蜈･
+
+implied sex
+繝阪ぎ縺ｫ penis, deep penetration
+
+
+
+譚ｾ闡牙ｴｩ縺・/td>
+on side, leg up, split, leg hold, kneeling, prone bone
+
+
+
+縺縺・＠繧・″繝帙・繝ｫ繝・/td>
+leg lock
+
+
+
+遞ｮ莉倥￠繝励Ξ繧ｹ
+
+mating press
+
+
+
+縺翫∪繧薙％繧ｵ繝ｳ繝峨う繝・メ
+
+pussy sandwich
+
+
+
+鬧・ｼ・/td>
+suspended congress
+
+
+
+窶・い繝翫Ν蝗ｺ繧・br>窶・・ｧ・ｼ・/td>
+reverse suspended congress
+
+
+
+螂ｳ菴鍋屁
+
+nyotaimori
+
+
+
+
+窶・ｽ薙・荳翫↓鬟溘∋迚ｩ
+
+
+food on body
+
+
+
+窶・・縺ｮ荳翫↓鬟溘∋迚ｩ
+
+food on breasts
+
+
+
+莠ｺ縺ｮ荳翫↓蟇昴※縺・ｋ
+
+lying on person
+
+
+
+閼壹・荳翫↓蠎ｧ繧・/td>
+sitting on lap
+
+
+
+閹晄桾
+
+lap pillow
+
+
+
+莉紋ｺｺ縺ｮ閼壹・荳翫〒蟇昴◎縺ｹ繧・/td>
+lying on lap
+
+
+
+荳驛ｨ豌ｴ荳ｭ讒句峙
+
+partially underwater shot
+
+
+
+
+
+荵ｳ邉ｻ繝励Ξ繧､
+
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+縺ｱ縺ｵ縺ｱ縺ｵ
+
+head between breasts
+
+
+
+窶・・縺ｵ縺ｱ縺ｵ繝ｻ蝓九∪縺｣縺ｦ縺・ｋ蛛ｴ縺ｮ鬘斐′隕九∴縺ｪ縺・％縺ｨ縺悟､壹＞
+
+face to breasts
+
+
+
+窶・｡斐・荳翫↓荵ｳ繧偵・縺帙ｋ
+
+breast smother
+
+
+
+荵ｳ譫・/td>
+breast pillow
+
+
+
+謠峨∪縺帙※繧・/td>
+guided breast grab
+
+
+
+繝√Ι繧ｳ繝代う
+
+chocolate on breasts
+
+
+
+荵ｳ隕九○
+
+presenting breasts
+
+
+
+荵ｳ鬥悶ぜ繝ｪ
+
+penis to breast
+
+
+
+荵ｳ闊舌ａ
+
+licking breast
+
+
+
+荵ｳ縺ｫ蝎帙∩霍｡
+
+bite mark on breast
+
+
+
+荵ｳ繧抵ｼ域欠縺ｧ・臥ｪ√￥
+
+poking another's breast
+
+
+
+
+
+莠御ｺｺ
+
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+逕ｷ螂ｳ
+
+hetero
+
+
+
+螂ｳ螂ｳ
+
+yuri
+
+
+
+逕ｷ逕ｷ
+
+bara
+
+
+
+BL繝ｻ閻・/td>
+yaoi
+
+
+
+螂ｳ・九・縺溘↑繧・/td>
+futa with female
+
+
+
+逕ｷ・九・縺溘↑繧・/td>
+futa with male
+
+
+
+縺翫・繝ｭ繝ｪ
+・医♀縺ｫ繝ｭ繝ｪ縺ｯ縺ｪ縺・ｼ・/td>
+onee-loli, age difference
+
+
+
+縺翫・繧ｷ繝ｧ繧ｿ
+
+onee-shota, age difference
+
+
+
+縺翫↓繧ｷ繝ｧ繧ｿ
+
+onii-shota, age difference
+
+
+
+蟄蝉ｾ帛酔螢ｫ
+繧､繝ｳ繝斐が
+
+kodomo doushi
+
+
+
+
+
+隍・焚莠ｺ
+
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+3p螂ｳ螂ｳ逕ｷ
+
+ffm threesome
+
+
+
+3p螂ｳ逕ｷ逕ｷ
+
+
+mmf threesome
+
+
+
+
+3p螂ｳ逕ｷ縺ｵ縺溘↑繧・/td>
+mfd threesome
+
+
+
+3p螂ｳ縺ｵ縺溘↑繧翫・縺溘↑繧・/td>
+mdd threesome
+
+
+
+4p, 5p, 荵ｱ莠､
+
+group sex
+
+
+
+隍・焚莠ｺ縺後そ繝・け繧ｹ
+
+orgy
+
+
+
+隍・焚莠ｺ縺御ｸ莠ｺ縺ｮ繧ｭ繝｣繝ｩ繧ｯ繧ｿ繝ｼ縺ｨ繧ｻ繝・け繧ｹ
+
+gangbang
+
+
+
+隕ｪ蟄蝉ｸｼ
+
+oyakodon (sex), mother and daughter
+
+
+
+蟋牙ｦｹ荳ｼ
+
+
+shimaidon (sex)
+
+
+
+
+
+
+繝昴・繧ｺ
+
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+I 蟄・/td>
+split, standing split
+
+
+
+繧ｬ繝玖ぃ
+
+bowlegged pose
+
+
+
+閹晉ｫ九■
+
+kneeling
+
+
+
+蜑榊ｱ医∩
+
+leaning forward
+
+
+
+窶・ｈ繧頑ｷｱ縺・燕螻医∩
+
+bent over
+
+
+
+雹ｲ雕・/td>
+spread legs, squatting
+
+
+
+蜑ｲ蠎ｧ 縺ｺ縺溘ｓ蠎ｧ繧・螂ｳ縺ｮ蟄仙ｺｧ繧・繧｢繝偵Ν蠎ｧ繧・/td>
+wariza
+
+
+
+鬥ｬ荵励ｊ
+
+straddling
+
+
+
+蝗帙▽繧馴吶＞ 
+
+all fours
+
+
+
+窶・ｰｻ遯√″蜃ｺ縺・br>窶・ｭ荳九￡
+
+top-down bottom-up
+
+
+
+荳｡閼壻ｸ翫￡
+
+knees up
+
+
+
+驥守坤蜈郁ｼｩ繝昴・繧ｺ
+
+arms behind head
+
+
+
+閹昴°縺九∴
+
+knee up
+
+
+
+豁｣蠎ｧ
+
+seiza
+
+
+
+騾・＆蜷翫ｊ
+
+upside-down
+
+
+
+讓ｪ蠎ｧ繧・/td>
+yokozuwari
+
+
+
+縺ゅ＄繧・/td>
+indian style
+
+
+
+菴楢ご蠎ｧ繧・/td>
+hugging own legs
+
+
+
+迚・・遶九■
+
+on one knee
+
+
+
+辷ｪ蜈育ｫ九■
+
+tiptoes
+
+
+
+M蟄鈴幕閼・/td>
+m legs
+
+
+
+蜀・ぃ
+
+pigeon-toed
+
+
+
+繧ゅ◆繧後°縺九ｋ
+
+reclining
+
+
+
+閧｡蜑ｲ繧奇ｼ域ｭ｣髱｢縲・u>side
+ 縺ｧ蜷医▲縺ｦ繧具ｼ・/td>
+side sitting split
+
+
+
+閧｡蜑ｲ繧奇ｼ亥・髱｢縲・u>front
+ 縺ｧ蜷医▲縺ｦ繧具ｼ・/td>
+front sitting split
+
+
+
+謇九ヶ繝ｩ
+
+covering breasts
+
+
+
+窶・援謇九ヶ繝ｩ
+
+covering one breast
+
+
+
+
+
+蟆ｻ邉ｻ菴謎ｽ・/h4>
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+繝舌ャ繧ｯ
+
+bent over, sex from behind
+
+
+
+窶・ｯ昴ヰ繝・け
+
+prone bone
+
+
+
+窶・屁縺､繧馴吶＞繝舌ャ繧ｯ
+
+doggystyle
+
+
+
+窶・ｰｻ遯√″蜃ｺ縺・/td>
+top-down bottom-up
+
+
+
+螢∝ｰｻ
+
+stuck, through wall
+
+
+
+蟆ｻ繧ｿ繝ｯ繝ｼ
+
+human stacking
+
+
+
+蟆ｻ蜷医ｏ縺・/td>
+ass-to-ass
+
+
+
+
+
+髱樊諺蜈･邉ｻ菴謎ｽ・/h4>
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+邏閧｡
+
+grinding
+
+
+
+窶ジ邏閧｡
+
+2girls, cooperative grinding, double grinding
+
+
+
+窶・ｴ閧｡・亥ｰｻ・・/td>
+buttjob
+
+
+
+窶・､ｪ繧ゅｂ繧ｳ繧ｭ
+
+thigh sex
+
+
+
+窶・ｴ閧｡・域恪雜翫＠・・/td>
+dry humping
+
+
+
+雋晏粋繧上○
+
+tribadism
+
+
+
+謇九さ繧ｭ
+
+handjob
+
+
+
+謖ｿ蜈･蟇ｸ蜑・/td>
+just the tip
+
+
+
+邊ｾ豸ｲ鬚ｨ蜻・br>繧ｶ繝ｼ繝｡繝ｳ鬚ｨ蜻・/td>
+cum bath
+
+
+
+蟆ｻ繧ｿ繝ｯ繝ｼ
+
+human stacking
+
+
+
+蟆ｻ蜷医ｏ縺・/td>
+ass-to-ass
+
+
+
+
+
+繧ｪ繝翫ル繝ｼ螂ｳ
+
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+繧ｪ繝翫ル繝ｼ螂ｳ
+
+female masturbation
+
+
+
+窶・ｧ偵が繝・/td>
+crotch rub
+
+
+
+窶・そ繝ｫ繝墓・謦ｫ
+
+hand on own crotch
+
+
+
+
+螂ｳ諤ｧ荳ｻ隕ｳ隕也せ
+
+
+隹ｷ髢捺悽莠ｺ隕也せ
+
+
+female pov
+
+
+
+繧ｻ繝ｫ繝穂ｹｳ蜷ｸ縺・/td>
+sucking own breasts
+
+
+
+
+
+繝輔ぉ繝ｩ繝ｻ繧､繝ｩ繝槭メ繧ｪ繝ｻ繧ｭ繧ｹ
+
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+繝輔ぉ繝ｩ
+
+fellatio
+
+
+
+窶・ヰ繧ｭ繝･繝ｼ繝繝輔ぉ繝ｩ
+
+:&gt;=
+
+
+
+繧､繝ｩ繝槭メ繧ｪ
+
+irrumatio
+
+
+
+窶・哩繝懊さ
+
+throat bulge
+
+
+
+繝・ぅ繝ｼ繝励せ繝ｭ繝ｼ繝・/td>
+deepthroat
+
+
+
+繧ｭ繧ｹ
+
+kiss
+
+
+
+繝・ぅ繝ｼ繝励く繧ｹ
+縺ｹ繧阪■繧・・
+繝輔Ξ繝ｳ繝√く繧ｹ
+
+french kiss
+
+
+
+繧ｭ繧ｹ鬘・br>繧ｭ繧ｹ蠕・■
+
+incoming kiss
+
+
+
+
+
+繧ｨ繝ｭ陦｣陬・/h2>
+蜈ｨ霄ｫ
+
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+繝ｬ繧ｪ繧ｿ繝ｼ繝・/td>
+leotard
+
+
+
+窶・か縺ｲ繧ゅ↑縺励・繝ｬ繧ｪ繧ｿ繝ｼ繝・/td>
+strapless leotard
+
+
+
+窶・上￠繝ｬ繧ｪ繧ｿ繝ｼ繝・/td>
+see-through leotard
+
+
+
+窶・Ξ繧ｪ繧ｿ繝ｼ繝峨★繧峨＠
+
+leotard aside
+
+
+
+繝懊ョ繧｣繝ｼ繧ｹ繝ｼ繝・br>繝ｩ繝舌・繧ｹ繝ｼ繝・/td>
+bodysuit
+
+
+
+窶・・縺｣縺｡繧翫・繝・ぅ繝ｼ繧ｹ繝ｼ繝・/td>
+impossible bodysuit
+
+
+
+繝薙く繝・/td>
+bikini
+
+
+
+窶・・繧､繧ｯ繝ｭ繝薙く繝・/td>
+micro bikini
+
+
+
+窶・･ｷ繝悶Λ
+
+pretzel bikini
+
+
+
+窶・ン繧ｭ繝九★繧峨＠
+
+bikini bottom aside
+
+
+
+窶・恪縺ｮ荳九↓繝薙く繝・/td>
+bikini over clothes
+
+
+
+豌ｴ逹
+
+swimsuit
+
+
+
+窶・せ繝ｪ繝ｳ繧ｰ繧ｷ繝ｧ繝・ヨ
+
+slingshot swimsuit
+
+
+
+窶・Ρ繝ｳ繝斐・繧ｹ豌ｴ逹
+
+one-piece swimsuit
+
+
+
+窶・せ繧ｯ豌ｴ
+
+school swimsuit
+
+
+
+窶・ｫｶ豕ｳ豌ｴ逹
+
+competition swimsuit
+
+
+
+窶・ワ繧､繝ｬ繧ｰ繝ｯ繝ｳ繝斐・繧ｹ豌ｴ逹
+
+highleg one-piece swimsuit
+
+
+
+窶・ｰｴ逹縺壹ｉ縺・/td>
+swimsuit aside
+
+
+
+窶・恪縺ｮ荳九↓豌ｴ逹
+
+swimsuit under clothes
+
+
+
+繧ｻ繝ｼ繧ｿ繝ｼ
+
+sweater
+
+
+
+窶・Μ繝也函蝨ｰ繧ｻ繝ｼ繧ｿ繝ｼ
+
+ribbed sweater
+
+
+
+窶・ｫ･雋槭ｒ谿ｺ縺吶そ繝ｼ繧ｿ繝ｼ
+
+virgin killer sweater
+
+
+
+窶・ｲ蛹也沿遶･雋槭ｒ谿ｺ縺吶そ繝ｼ繧ｿ繝ｼ
+
+virgin destroyer sweater
+
+
+
+邱顔ｸ・繝懊Φ繝・・繧ｸ
+
+bondage
+
+
+
+窶・・繝ｳ繝・・繧ｸ諡俶據陦｣
+
+bondage outfit
+
+
+
+窶・Μ繝懊Φ諡俶據
+
+ribbon bondage
+
+
+
+繝翫う繝医ぎ繧ｦ繝ｳ
+繝阪げ繝ｪ繧ｸ繧ｧ
+
+nightgown
+
+
+
+窶・す繝･繝溘・繧ｺ
+窶・ｸ磯聞縺ｧ閧ｩ邏舌・繝吶ン繝ｼ繝峨・繝ｫ
+
+chemise
+
+
+
+窶・・繝薙・繝峨・繝ｫ
+窶・洒縺・Λ繝ｳ繧ｸ繧ｧ繝ｪ繝ｼ繧・ロ繧ｰ繝ｪ繧ｸ繧ｧ
+
+babydoll
+
+
+
+繝ｩ繝ｳ繧ｸ繧ｧ繝ｪ繝ｼ
+
+lingerie
+
+
+
+窶・賢繝ｩ繝ｳ繧ｸ繧ｧ繝ｪ繝ｼ
+
+cat lingerie
+
+
+
+繝舌ル繝ｼ繧ｬ繝ｼ繝ｫ
+
+playboy bunny
+
+
+
+窶・・ヰ繝九・
+
+reverse bunnysuit
+
+
+
+邯ｲ
+
+fishnets
+
+
+
+繧ｳ繝ｫ繧ｻ繝・ヨ・郁・繧ｫ繝・・縺ｪ縺暦ｼ・/td>
+corset
+
+
+
+繝薙せ繝√ぉ・郁・繧ｫ繝・・縺､縺搾ｼ・/td>
+bustier
+
+
+
+繝ｬ繝ｼ繧ｹ莉倥″縺ｮ
+
+lace-trimmed
+
+
+
+繝ｪ繝懊Φ莉倥″縺ｮ
+
+ribbon-trimmed
+
+
+
+謇区楾
+
+cuffs
+
+
+
+謇矩権・郁ｭｦ蟇溘′菴ｿ縺・ｄ縺､・・/td>
+handcuffs
+
+
+
+蜈ｨ霄ｫ繧ｿ繧､繝・/td>
+bodystocking
+
+
+
+遐ｴ繧後◆
+
+torn
+
+
+
+繝・き繧翫・縺ゅｋ繝ｩ繝舌・
+
+latex
+
+
+
+
+
+荳雁濠霄ｫ
+
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+繝悶Λ繧ｸ繝｣繝ｼ
+
+bra
+
+
+
+窶・ヶ繝ｩ縺ｪ縺・/td>
+no bra
+
+
+
+窶・せ繝昴ヶ繝ｩ
+
+sports bra
+
+
+
+窶・Μ繝懊Φ莉倥″繝悶Λ
+
+bow bra
+
+
+
+窶・せ繝医Λ繝・・繝ｬ繧ｹ繝悶Λ
+
+strapless bra
+
+
+
+窶・ヨ繝・・繝ｬ繧ｹ繝悶Λ
+窶・が繝ｼ繝励Φ繝悶Λ
+
+cupless bra
+
+
+
+窶・・繝・け繧貞､悶＠縺溘ヶ繝ｩ
+繝輔Ο繝ｳ繝医・繝・け縺悟､壹＞
+
+open bra
+
+
+
+窶・・繝ｫ繝医ヶ繝ｩ
+
+belt bra
+
+
+
+鬥冶ｼｪ
+
+collar
+
+
+
+窶・堪縺ｮ鬥冶ｼｪ
+
+animal collar
+
+
+
+窶・≡螻槭・鬥冶ｼｪ
+
+metal collar
+
+
+
+繝吶Ν繝医メ繝ｧ繝ｼ繧ｫ繝ｼ
+
+belt collar
+
+
+
+繧ｦ繧ｻ繧ｯ
+蜿､莉｣繧ｨ繧ｸ繝励ヨ縺ｮ鬥夜｣ｾ繧・/td>
+usekh collar
+
+
+
+繝医ャ繝励Ξ繧ｹ
+
+topless female
+
+
+
+繧ｭ繝｣繝溘た繝ｼ繝ｫ
+
+camisole
+
+
+
+繝九ャ繝励Ξ繧ｹ
+
+pasties
+
+
+
+逶ｮ髫縺・/td>
+blindfold
+
+
+
+迪ｿ霓｡
+
+gag
+
+
+
+窶・・繝ｼ繝ｫ繧ｮ繝｣繧ｰ
+
+ball gag
+
+
+
+窶・哨縺ｮ荳ｭ縺ｫ譛・/td>
+cloth gag
+
+
+
+窶・ユ繝ｼ繝励ぐ繝｣繧ｰ
+
+tape gag
+
+
+
+髢玖･溘す繝｣繝・/td>
+open collar
+
+
+
+荵ｳ蠑ｷ隱ｿ譛・/td>
+framed breasts
+
+
+
+閼ｱ縺・□繝悶Λ
+
+unworn bra
+
+
+
+縺ｲ繧ゅ〒邵帙ｉ繧後◆閭ｸ
+
+breast bondage
+
+
+
+閭ｸ縺ｮ繧ｫ繝・ヨ繧｢繧ｦ繝・/td>
+breast cutout
+
+
+
+隹ｷ髢薙↓蟶・ｯ・○
+
+clothes between breasts
+
+
+
+荵ｳ荳崎ｶｳ
+
+oversized breast cup
+
+
+
+繝上Α荵ｳ
+
+undersized breast cup
+
+
+
+
+
+荳句濠霄ｫ
+
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+繧ｷ繝ｧ繝ｼ繝・br>繝代Φ繝・ぅ
+
+panties
+
+
+
+窶・す繝ｧ繝ｼ繝・★繧峨＠
+
+panties aside
+
+
+
+窶・Μ繝懊Φ莉倥″繧ｷ繝ｧ繝ｼ繝・/td>
+bow panties
+
+
+
+窶・ｸ槭ヱ繝ｳ
+
+striped panties
+
+
+
+窶・ｨｪ縺ｧ邏舌〒邨舌ｓ縺繧ｷ繝ｧ繝ｼ繝・/td>
+side-tie panties
+
+
+
+窶サ 繝舌ャ繧ｯ
+
+thong
+
+
+
+窶・ｴ舌ヱ繝ｳ
+窶サ 繝舌ャ繧ｯ繧医ｊ髱｢遨阪′迢ｭ縺・/td>
+g-string
+
+
+
+窶・し繧､繝峨・縺ｿ邏舌ヱ繝ｳ
+窶・燕繧・ｾ後ｍ縺ｯ縺｡繧・ｓ縺ｨ蟶・′縺ゅｋ
+
+string panties
+
+
+
+窶・ワ繧､繝ｬ繧ｰ繝代Φ繝・ぅ
+
+highleg panties
+
+
+
+窶・┳縺・□繧ｷ繝ｧ繝ｼ繝・/td>
+unworn panties
+
+
+
+窶・Ο繝ｼ繝ｩ繧､繧ｺ繝代Φ繝・/td>
+lowleg panties
+
+
+
+窶・ｿ｡繧後◆繝代Φ繝・ぅ
+
+wet panties
+
+
+
+窶・が繝ｼ繝励Φ繧ｷ繝ｧ繝ｼ繝・/td>
+crotchless panties
+
+
+
+窶・⊇縺ｩ縺代◆繝代Φ繝・ぅ
+
+untied panties
+
+
+
+窶・沒縺ｿ繝代Φ
+
+stained panties
+
+
+
+窶・ｦ九○繝上う繝ｬ繧ｰ繝代Φ繝・/td>
+panty straps
+
+
+
+荳九□縺醍ｩｿ縺・※縺ｪ縺・/td>
+bottomless
+
+
+
+繧ｷ繝ｧ繝ｼ繝・↑縺・/td>
+no panties
+
+
+
+繧ｬ繝ｼ繧ｿ繝ｼ縺ｮ縺ｲ繧ゅ□縺・br>隕九∴縺ｦ縺・ｋ
+
+garter straps
+
+
+
+繧ｬ繝ｼ繧ｿ繝ｼ縺ｮ縺ｲ繧ゅ→繝吶Ν繝・br>荳｡譁ｹ隕九∴縺ｦ繧・/td>
+garter belt
+
+
+
+繝九・繧ｽ繝・け繧ｹ
+繝九・繝上う
+
+thighhighs
+
+
+
+雜ｳ譫ｷ
+
+shackles
+
+
+
+蜑崎ｲｼ繧・/td>
+maebari
+
+
+
+窶・ワ繝ｼ繝亥燕雋ｼ繧・/td>
+heart maebari
+
+
+
+窶ε苓ｲｼ繧・/td>
+cross pasties
+
+
+
+繧ｪ繝ｼ繝励Φ繧ｯ繝ｭ繝・メ
+閧｡髢馴Κ縺ｪ縺励・陦｣陬・/td>
+crotchless
+
+
+
+繝舌う繝蜂N繝代Φ繝・/td>
+vibrator under panties
+
+
+
+蟆ｻ繧ｫ繝・ヨ繧｢繧ｦ繝・/td>
+ass cutout
+
+
+
+繧｢繝翫Ν繝励Λ繧ｰ
+
+butt plug
+
+
+
+窶・ず繝･繧ｨ繝ｪ繝ｼ繧｢繝翫Ν繝励Λ繧ｰ
+
+jewel butt plug
+
+
+
+
+
+繝上Φ繝峨し繧､繝ｳ
+
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+雋ｫ騾壹し繧､繝ｳ・井ｸ｡謇九ｒ菴ｿ縺｣縺ｦ霈ｪ縺ｨ譽偵ｒ陦ｨ迴ｾ縺吶ｋ繧・▽・・/td>
+penetration gesture
+
+
+
+雋ｫ騾壹し繧､繝ｳ・井ｺｺ蟾ｮ縺玲欠縺ｨ荳ｭ謖・→縺ｮ髢薙↓隕ｪ謖・ｒ蜈･繧後ｋ繧・▽・・/td>
+fig sign
+
+
+
+繧ｨ繧｢謇九さ繧ｭ繝ｻ謇九さ繧ｭ邏謖ｯ繧・/td>
+handjob jesture
+
+
+
+繧ｨ繧｢繝輔ぉ繝ｩ
+
+fellatio gesture, tongue out
+
+
+
+繧ｨ繧｢繧ｯ繝ｳ繝具ｼ郁・蜃ｺ縺励ヴ繝ｼ繧ｹ・・/td>
+cunnilingus gesture
+
+
+
+繝斐・繧ｹ
+
+v
+
+
+
+窶・ぐ繝｣繝ｫ繝斐・繧ｹ
+
+gyaru v
+
+
+
+窶・・ヴ繝ｼ繧ｹ
+
+inward v
+
+
+
+窶・ム繝悶Ν繝斐・繧ｹ
+
+double v
+
+
+
+謇九〒繝上・繝・/td>
+heart hands
+
+
+
+
+
+逕ｷ
+
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+繝槭ャ繝√Ι
+
+muscular male
+
+
+
+閧･貅
+
+fat man
+
+
+
+縺翫§縺輔ｓ
+
+mature male
+
+
+
+縺倥＞縺輔ｓ
+
+old man
+
+
+
+豎壹＞縺翫▲縺輔ｓ
+豎壹▲縺輔ｓ
+繝也塙
+遞ｮ莉倥￠縺翫§縺輔ｓ
+繧ｭ繝｢繧ｪ繧ｿ
+
+ugly bastard
+
+
+
+繧ｫ繧ｪ繝翫す
+
+faceless male
+
+
+
+繝上ご
+
+bald
+
+
+
+濶ｲ鮟・/td>
+dark-skinned male
+
+
+
+
+
+繝壹ル繧ｹ
+
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+繝壹ル繧ｹ
+
+penis
+
+
+
+繝壹ル繧ｹ髱呵ц
+
+veiny penis
+
+
+
+螟ｪ縺・・繝九せ
+
+girthy penis
+
+
+
+蜍・ｵｷ
+
+erection
+
+
+
+關弱∴繝壹ル繧ｹ
+蜍・ｵｷ縺励※縺・↑縺・・繝九せ
+
+flaccid
+
+
+
+蛹・月
+
+foreskin
+
+
+
+蜊雁翁縺・/td>
+phimosis
+
+
+
+
+
+邊ｾ豸ｲ
+
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+邊ｾ豸ｲ
+
+cum
+
+
+
+繧ｬ繝槭Φ豎・/td>
+precum, precum drip
+
+
+
+窶・ｳｸ繧貞ｼ輔￥繧ｬ繝槭Φ豎・/td>
+precum string
+
+
+
+荳ｭ蜃ｺ縺・/td>
+cum in pussy
+
+
+
+貅｢繧檎ｲｾ豸ｲ
+
+cumdrip, cum overflow
+
+
+
+繧ｶ繝ｼ繝｡繝ｳ繝悶Μ繝・ず
+
+cum string
+
+
+
+邊ｾ豸ｲ縺ｮ豌ｴ縺溘∪繧・/td>
+cum pool
+
+
+
+
+
+諢帶ｶｲ
+
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+諢帶ｶｲ
+
+pussy juice
+
+
+
+諢帶ｶｲ邱・/td>
+pussy juice trail
+
+
+
+荳狗捩縺ｮ諢帶ｶｲ霍｡
+
+pussy juice stain
+
+
+
+
+
+隗ｦ謇・/h2>
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+隗ｦ謇・/td>
+tentacles
+
+
+
+隗ｦ謇句ｧｦ
+
+tentacle sex
+
+
+
+闍怜ｺ・/td>
+tentacle pit
+
+
+
+
+
+豺ｫ邏・/h2>
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+豺ｫ邏・/td>
+pubic tattoo
+
+
+
+
+
+繝舌う繝悶・繝・ぅ繝ｫ繝・/h2>
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+繝舌う繝・/td>
+vibrator
+
+
+
+繝斐Φ繧ｯ繝ｭ繝ｼ繧ｿ繝ｼ
+
+egg vibrator
+
+
+
+繝舌う繝蜂N繝代Φ繝・/td>
+vibrator under panties
+
+
+
+繝・ぅ繝ｫ繝・/td>
+dildo
+
+
+
+蜿碁ｭ繝・ぅ繝ｫ繝・/td>
+double dildo
+
+
+
+逡ｰ迚ｩ謖ｿ蜈･
+
+vaginal object insertion
+
+
+
+
+
+縺翫＠縺｣縺薙・謾ｾ蟆ｿ繝ｻ縺翫ｂ繧峨＠
+
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+謾ｾ蟆ｿ
+
+peeing
+
+
+
+縺翫ｂ繧峨＠
+
+peeing self
+
+
+
+鬟ｲ蟆ｿ
+
+drinking pee
+
+
+
+
+
+
+
+螂ｳ諤ｧ蝎ｨ
+
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+螟ｧ髯ｰ蜚・/td>
+pussy
+
+
+
+窶・､ｧ髯ｰ蜚・′荳驛ｨ髫繧後※縺・ｋ
+窶・､ｧ髯ｰ蜚・・鬟溘＞霎ｼ縺ｿ
+
+partially visible vulva
+
+
+
+蟆城匆蜚・/td>
+long labia
+
+
+
+蛹・月繧ｯ繝ｪ繝医Μ繧ｹ
+
+clitoral hood
+
+
+
+繝槭Φ繧ｹ繧ｸ
+
+cleft of venus
+
+
+
+窶・・繝ｳ繧ｹ繧ｸ・亥ｸ・ｶ翫＠・・/td>
+cameltoe
+
+
+
+諢帶牒
+
+hand on another's crotch
+
+
+
+遐ｴ逑・/td>
+defloration
+
+
+
+髯ｰ豈・/td>
+pubic hair
+
+
+
+窶・函縺医°縺・/td>
+sparse pubic hair
+
+
+
+窶・ｂ縺輔ｂ縺輔・髯ｰ豈・/td>
+excessive pubic hair
+
+
+
+蜑・ｊ霍｡
+
+pubic stubble
+
+
+
+
+
+縺上・縺・/h4>
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+縺上・縺・/td>
+spread pussy
+
+
+
+窶・ｸｻ隕ｳ隕也せ縺上・縺・/td>
+spreading another's pussy, pov hands
+
+
+
+窶・捩陦｣縺上・縺・/td>
+spread pussy under clothes
+
+
+
+窶・ワ繝ｼ繝輔￥縺ｱ縺・br>窶・援謇九￥縺ｱ縺・/td>
+half-spread pussy
+
+
+
+
+
+繧｢繝後せ繝ｻ蟆ｻ遨ｴ
+
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+蟆ｻ
+
+ass
+
+
+
+繧｢繝後せ
+
+anus
+
+
+
+窶・☆縺ｼ繧薙□繧｢繝後せ縲√ラ繝ｼ繝翫ヤ蝙九い繝後せ
+
+puckered anus
+
+
+
+窶・⊃縺｣縺九ｊ繧｢繝翫Ν
+
+spread anus
+
+
+
+繧｢繝翫Ν・・anbooru 繧ｿ繧ｰ縺ｧ縺ｯ謖ｿ蜈･邉ｻ縺ｮ繧ｿ繧ｰ・・/td>
+anal
+
+
+
+蜑咲ｫ玖・繝槭ャ繧ｵ繝ｼ繧ｸ
+
+prostate milking
+
+
+
+蟆ｻ縺溘◆縺・/td>
+spanking
+
+
+
+
+
+閻ｹ
+
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+繧ｷ繝・け繧ｹ繝代ャ繧ｯ
+
+abs
+
+
+
+閻ｹ遲具ｼ域而縺医ａ縺ｪ繧ｷ繝・け繧ｹ繝代ャ繧ｯ・・/td>
+linea alba
+
+
+
+縺ｸ縺・/td>
+navel
+
+
+
+繧､繧ｫ閻ｹ
+
+belly
+
+
+
+閻ｹ蜃ｺ縺・/td>
+stomach
+
+
+
+縺ｸ縺晏・縺・/td>
+midriff
+
+
+
+鮠蠕・Κ
+
+groin
+
+
+
+窶・ｼ蠕・Κ縺ｮ縺吶§
+窶・ぃ縺医￥縺ｼ
+
+groin tendon
+
+
+
+閻ｰ鬪ｨ
+
+hip bones
+
+
+
+譛阪′蠑ｵ繧贋ｻ倥＞縺ｦ
+閻ｰ縺ｮ谿ｵ蟾ｮ縺瑚ｦ九∴縺ｦ縺・ｋ
+
+hip dips
+
+
+
+邏ｰ縺・・
+
+narrow waist
+
+
+
+讓ｪ閻ｹ
+
+obliques
+
+
+
+
+
+蟆ｻ
+
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+繝・き蟆ｻ
+
+wide hip
+
+
+
+蟆ｻ縺縺台ｸ崎・辟ｶ縺ｫ繝・き縺・/td>
+huge ass
+
+
+
+蟷ｳ繧峨↑蟆ｻ
+
+flat ass
+
+
+
+蟆ｻ蜃ｺ縺暦ｼ亥ｰｻ縺悟ｸ・〒隕・ｏ繧後※縺・↑縺・ｼ・/td>
+bare hips
+
+
+
+譽偵・荳翫↓蟆ｻ繧剃ｹ励○縺ｦ莨代ｓ縺ｧ縺・ｋ
+
+ass rest
+
+
+
+蟆ｻ縺ｮ縺励ｏ
+
+ass support
+grabbing own ass 縺ｨ繧ｻ繝・ヨ縺ｧ繧医￥菴ｿ繧上ｌ繧・/td>
+
+
+蜊翫こ繝・/td>
+butt crack
+
+
+
+荳句ｰｻ
+
+underbutt
+
+
+
+蜑阪°繧芽ｦ九∴繧句ｰｻ
+
+ass visible through thighs
+
+
+
+蟆ｻ荳峨▽闡会ｼ域ｰｴ逹繧・ｸ狗捩縺悟ｼｵ繧贋ｻ倥＞縺ｦ蟆ｻ縺ｨ諤ｧ蝎ｨ縺ｨ縺ｧ鬆伜沺縺鯉ｼ薙▽縺ｧ縺阪ｋ縺薙→・・/td>
+trefoil
+
+
+
+蟆ｻ繧ｿ繝ｯ繝ｼ
+
+human stacking
+
+
+
+蟆ｻ蜷医ｏ縺・/td>
+ass-to-ass
+
+
+
+蟆ｻ繧ｫ繝・ヨ繧｢繧ｦ繝・/td>
+ass cutout
+
+
+
+繧｢繝翫Ν繝励Λ繧ｰ
+
+butt plug
+
+
+
+窶・ず繝･繧ｨ繝ｪ繝ｼ繧｢繝翫Ν繝励Λ繧ｰ
+
+jewel butt plug
+
+
+
+
+
+荵ｳ
+
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+蝙ゅｌ荵ｳ
+繧ｭ繝｣繝ｩ縺檎峩遶九＠縺ｦ縺・ｋ縺ｨ縺阪↓菴ｿ縺・/td>
+sagging breasts
+
+
+
+蝙ゅｌ荵ｳ
+繧ｭ繝｣繝ｩ縺悟燕蛯ｾ縺励※縺・ｋ縺ｨ縺阪↓菴ｿ縺・/td>
+hanging breasts
+
+
+
+閭ｸ繝√Λ繝ｻ繝昴Ο繝ｪ
+
+breast slip
+
+
+
+閾ｪ辟ｶ縺ｪ荵ｳ
+
+breasts apart
+
+
+
+荵ｱ繧後♀縺｣縺ｱ縺・/td>
+unaligned breasts
+
+
+
+迚・ｹｳ蜃ｺ縺・/td>
+one breast out
+
+
+
+荵ｳ謌ｿ縺ｮ髱堤ｭ九・髱呵ц
+
+veiny breasts
+
+
+
+繝｢繝ｳ繝医ざ繝｡繝ｪ繝ｼ閻ｺ
+荵ｳ霈ｪ縺ｮ縺､縺ｶ縺､縺ｶ
+
+glands of montgomery
+
+
+
+繝代う繧ｹ繝ｩ
+
+strap between breasts
+
+
+
+荵ｳ謠ｺ繧後・縺ゅ・繧後ｋ荵ｳ
+
+bouncing breasts
+
+
+
+窶・ｹｱ繧後♀縺｣縺ｱ縺・/td>
+unaligned breasts
+
+
+
+荵ｳ縺ｮ荳九↓閻・/td>
+arm under breasts
+
+
+
+鬮ｪ繝悶Λ
+
+hair over breasts
+
+
+
+繝懊ち繝ｳ鬟帙・縺・/td>
+bursting breasts
+
+
+
+荵ｳ蠑ｷ隱ｿ譛・/td>
+framed breasts
+
+
+
+縺ｨ縺後▲縺滉ｹｳ繝ｻ荵ｳ鬥・/td>
+perky breasts
+
+
+
+窶・→縺後▲縺滉ｹｳ繝ｻ荵ｳ鬥・/td>
+pointy breasts
+
+
+
+豬ｮ荵ｳ繝ｻ蜈･豬ｴ譎ゅ↓菴ｿ縺・/td>
+floating breasts
+
+
+
+
+
+荵ｳ鬥・/h4>
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+髯･豐｡荵ｳ鬥・/td>
+inverted nipples
+
+
+
+荵ｳ霈ｪ
+
+areola
+
+
+
+窶・ｹｳ霈ｪ繝√Λ
+
+areola slip
+
+
+
+鮟剃ｹｳ鬥・/td>
+dark nipples
+
+
+
+繝九ャ繝励Ξ繧ｹ
+
+pasties
+
+
+
+窶・ワ繝ｼ繝医ル繝・・繝ｬ繧ｹ
+
+heart pasties
+
+
+
+閭ｸ繝昴メ
+騾上￠荵ｳ鬥・br>豬ｮ縺堺ｹｳ鬥・/td>
+covered nipples
+
+
+
+騾上￠譛・/td>
+see-through clothes
+
+
+
+
+
+繝斐い繧ｹ
+
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+荵ｳ鬥悶ヴ繧｢繧ｹ
+
+nipple piercing
+
+
+
+窶・ヰ繝ｼ繝吶Ν繝斐い繧ｹ
+
+barbell piercing
+
+
+
+窶・ヰ繝ｼ繝斐い繧ｹ
+
+nipple bar
+
+
+
+窶・Μ繝ｳ繧ｰ繝斐い繧ｹ
+
+nipple rings
+
+
+
+窶・ｮ晉浹繝斐い繧ｹ
+
+nipple jewelry
+
+
+
+荵ｳ鬥悶↓蜷肴惆
+螳牙・繝斐Φ蜷肴惆縺ｮ荵ｳ鬥悶ヴ繧｢繧ｹ
+
+nipple tag
+
+
+
+
+
+荵ｳ蜍穂ｽ・/h4>
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+莉紋ｺｺ縺ｮ閭ｸ繧呈初繧
+
+grabbing another's breast
+
+
+
+窶・レ蠕後°繧芽・謠峨∩
+
+grabbing from behind
+
+
+
+窶・ｷｲ謗ｴ縺ｿ
+
+deep skin
+
+
+
+窶・か雜翫＠縺ｫ荵ｳ謠峨∩
+
+grabbed breast over shoulder
+
+
+
+繧ｻ繝ｫ繝穂ｹｳ謠峨∩
+
+grabbing own breast
+
+
+
+迚・ｹｳ蜃ｺ縺・/td>
+one breast out
+
+
+
+縺翫▲縺ｱ縺・・繧ｱ繝・ヨ
+荵ｳ謖溘∩
+
+between breasts
+
+
+
+閭ｸ縺ｫ鬘斐ｒ縺・★繧√ｋ
+縺ｱ縺ｵ縺ｱ縺ｵ
+
+face between breasts
+
+
+
+縺ゅ※縺ｦ繧薙・繧・br>縺､縺ｶ繧後♀縺｣縺ｱ縺・br>縺翫＠縺､縺代♀縺｣縺ｱ縺・/td>
+breast press
+
+
+
+
+
+閧ｩ
+
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+閧ｩ蜃ｺ縺励・閧ｩ縺瑚ｦ九∴縺ｦ縺・ｋ
+
+bare shoulders
+
+
+
+窶・援譁ｹ閧ｩ蜃ｺ縺・/td>
+single bare shoulder
+
+
+
+繧ｪ繝輔す繝ｧ繝ｫ繝繝ｼ
+蜈・°繧芽か縺後↑縺・恪縺ｨ蜊願┳縺惹ｸ｡譁ｹ蜷ｫ繧
+
+off shoulder
+
+
+
+窶・が繝輔す繝ｧ繝ｫ繝繝ｼ繝峨Ξ繧ｹ
+
+off-shoulder dress
+
+
+
+窶・が繝輔す繝ｧ繝ｫ繝繝ｼ繧ｷ繝｣繝・/td>
+off-shoulder shirt
+
+
+
+窶・き繝・ヨ繧｢繧ｦ繧ｧ繧､繧ｷ繝ｧ繝ｫ繝繝ｼ
+窶・が繝ｼ繝励Φ繧ｷ繝ｧ繝ｫ繝繝ｼ
+
+shoulder cutout
+
+
+
+窶・援譁ｹ繧ｪ繝輔す繝ｧ繝ｫ繝繝ｼ
+
+single off shoulder
+
+
+
+鬮ｪ縺瑚か繧医ｊ蜑阪↓縺ゅｋ
+
+hair over shoulder
+
+
+
+閧ｩ縺ｫ謇九ｒ鄂ｮ縺・/td>
+hand on another's shoulder
+
+
+
+窶・か縺ｫ荳｡謇九ｒ鄂ｮ縺・/td>
+hands on another's shoulders
+
+
+
+閧ｩ邨・∩
+
+arm around shoulder
+
+
+
+鬥悶↓閻輔ｒ縺ｾ繧上☆
+
+arm around neck
+
+
+
+閧ｩ繧ｿ繝医ぇ繝ｼ
+
+shoulder tattoo
+
+
+
+閧ｩ逕ｲ鬪ｨ
+
+shoulder blades
+
+
+
+閧ｩ縺ｧ繧ｳ繝ｼ繝医ｒ逹繧・/td>
+coat on shoulders
+
+
+
+閧ｩ荵励ｊ
+繝√ン繧ｭ繝｣繝ｩ繧・・繧ｱ繝｢繝ｳ繧剃ｹ励○繧九％縺ｨ縺悟､壹＞
+
+on shoulder
+
+
+
+閧ｩ繧ｺ繝ｳ
+鬆ｭ繧定か縺ｫ荵励○繧九・繧ゅ◆繧後°縺九ｋ
+
+head on another's shoulder
+
+
+
+閧ｩ霆・/td>
+shoulder carry
+
+
+
+閧ｩ縺ｫ蛯倥・譟・ｒ縺ｮ縺帙ｋ
+
+umbrella over shoulder
+
+
+
+閧ｩ縺ｫ蝎帙∩霍｡
+
+bite mark on shoulder
+
+
+
+閧ｩ縺ｫ繧ｿ繧ｪ繝ｫ
+
+towel on one shoulder
+
+
+
+閧ｩ蜷医ｏ縺・/td>
+shoulder-to-shoulder
+
+
+
+
+
+閻・/h2>
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+閼・ｦ九○縺ｮ繝昴・繧ｺ
+
+arms up
+
+
+
+蜑阪↓謇九ｒ遯√″蜃ｺ縺・/td>
+outstretched arms
+
+
+
+蠕後ｍ謇狗ｸ帙ｊ
+
+arms behind back
+
+
+
+閻慕ｵ・∩
+
+crossed arms
+
+
+
+驥守坤蜈郁ｼｩ繝昴・繧ｺ
+
+arms behind head
+
+
+
+閻輔ｒ荳九ｍ縺・/td>
+arms at sides
+
+
+
+菴薙・蜑阪〒閻輔ｒ莠､蟾ｮ
+
+v arms
+
+
+
+窶・焔縺瑚ぃ髢薙・菴咲ｽｮ
+
+arms between legs
+
+
+
+閻輔ｒ逵滓ｨｪ縺ｫ蠎・￡繧・/td>
+spread arms
+
+
+
+w 閻・/td>
+w arms
+
+
+
+繝・・繝悶Ν縺ｮ荳翫↓閻輔ｒ鄂ｮ縺・/td>
+arms on table
+
+
+
+笨冶・
+
+x arms
+
+
+
+鬥悶↓閻・/td>
+arms around neck
+
+
+
+閻ｰ縺ｫ閻・/td>
+arms around waist
+
+
+
+謚ｱ縺阪＠繧√ｋ
+逵滓ｨｪ縺狗悄蠕後ｍ縺ｮ讒句峙縺ｫ縺ｪ繧翫ｄ縺吶＞
+
+arms around back
+
+
+
+
+
+譛・/h2>
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+縺ｵ縺ｨ繧ゅｂ縺ｮ鬟溘＞霎ｼ縺ｿ
+
+skindentation
+
+
+
+鬟溘＞霎ｼ縺ｿ
+
+wedgie
+
+
+
+繝悶Λ繝√Λ
+
+bra peek
+
+
+
+窶・ｵｮ縺阪ヶ繝ｩ
+
+bralines
+
+
+
+窶・上￠繝悶Λ
+
+bra visible through clothes
+
+
+
+繝代Φ繝√Λ
+
+pantyshot
+
+
+
+遏ｭ繝代Φ縺九ｉ隕九∴繧九ヱ繝ｳ繝√Λ
+
+upshorts
+
+
+
+蜑榊桙繧・/td>
+pelvic curtain
+
+
+
+
+
+諡俶據
+
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+鬥匁楾繝ｻ鬥冶ｼｪ
+
+collar
+
+
+
+謇区楾
+
+cuffs
+
+
+
+謇矩権・郁ｭｦ蟇溘′菴ｿ縺・ｄ縺､・・/td>
+handcuffs
+
+
+
+雜ｳ譫ｷ
+
+shackles
+
+
+
+繝・・繝玲鋸譚・/td>
+tape bondage
+
+
+
+蠕後ｍ謇・/td>
+arms behind back
+
+
+
+謇矩ｦ匁鋸譚・/td>
+bound wrists
+
+
+
+窶・Ο繝ｼ繝怜燕謇区鋸譚・/td>
+rope, bound wrists, v arms
+
+
+
+雜ｳ鬥匁鋸譚・/td>
+bound ankles
+
+
+
+
+
+繧ｪ繝幃｡・/h2>
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+繧ｪ繝幃｡・/td>
+puckered lips, rolling eyes, :o, mouth pursed, looking up
+
+
+
+
+
+鬥也ｵ槭ａ
+
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+鬥也ｵ槭ａ
+
+strangling
+
+
+
+遯呈・
+
+asphyxiation
+
+
+
+
+
+繧ｹ繝槭・蜀咏悄
+
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+繧ｹ繝槭・蜀咏悄
+
+cellphone photo
+
+
+
+繧ｹ繝槭・繧呈戟縺｣縺ｦ縺・ｋ
+
+viewer holding phone
+
+
+
+荳ｻ隕ｳ隕也せ
+
+pov
+
+
+
+荳ｻ隕ｳ隕也せ縺ｮ謇・/td>
+pov hands
+
+
+
+
+
+繧｢繝ｳ繧ｰ繝ｫ
+
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+逵滓ｭ｣髱｢
+
+straight-on
+
+
+
+蠕後ｍ
+
+from behind
+
+
+
+逵滓ｨｪ
+
+from side
+
+
+
+繝上う繧｢繝ｳ繧ｰ繝ｫ
+
+from above
+
+
+
+繝ｭ繝ｼ繧｢繝ｳ繧ｰ繝ｫ
+
+from below
+
+
+
+窶・勠縺ｮ隕也せ
+
+worm's eye view
+
+
+
+鬮俶園
+
+high up
+
+
+
+隍・焚繧｢繝ｳ繧ｰ繝ｫ
+
+multiple views
+
+
+
+逕ｻ蜒剰・菴薙′90蠎ｦ蝗櫁ｻ｢
+
+sideways
+
+
+
+譁懊ａ讒句峙
+讓ｪ髟ｷ縺ｮ繧｢繧ｹ繝壹け繝域ｯ斐〒
+繧ｭ繝｣繝ｩ縺ｮ髱｢遨阪ｒ螟ｧ縺阪￥縺吶ｋ縺溘ａ縺ｫ
+繧ｫ繝｡繝ｩ繧貞だ縺代◆讒句峙
+
+dutch angle
+
+
+
+荳贋ｸ句渚霆｢
+騾・ｫ九■縺ｮ譎ゅ↓菴ｿ縺・/td>
+upside-down
+
+
+
+鬲夂愍
+
+fisheye
+
+
+
+繝代ヮ繝ｩ繝・/td>
+panorama
+
+
+
+繝代・繧ｹ蠑ｷ隱ｿ
+
+foreshortening
+
+
+
+窶・し繝ｳ繝ｩ繧､繧ｺ遶九■
+
+sunrise stance
+
+
+
+螟悶°繧牙ｮ､蜀・ｒ隕九ｋ
+
+from outside
+
+
+
+蠑輔″縺ｮ隕也せ
+
+wide shot
+
+
+
+窶・ｶ・ｼ輔″縺ｮ隕也せ
+
+very wide shot
+
+
+
+荳驛ｨ豌ｴ荳ｭ讒句峙
+
+partially underwater shot
+
+
+
+
+
+逕ｻ隗・/h2>
+
+tag group:image composition
+
+
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+鬘斐い繝・・
+
+close-up
+
+
+
+鬆ｭ縺九ｉ骼夜ｪｨ縺ｾ縺ｧ
+
+portrait
+
+
+
+鬆ｭ縺九ｉ縺ｸ縺昴∪縺ｧ
+
+upper body
+
+
+
+鬆ｭ縺九ｉ閹昜ｸ翫∪縺ｧ
+
+cowboy shot
+
+
+
+閼壹ｒ蜷ｫ縺ｾ縺ｪ縺・/td>
+feet out of frame
+
+
+
+蜈ｨ霄ｫ
+
+full body
+
+
+
+
+
+繝ｩ繧､繝・ぅ繝ｳ繧ｰ
+
+
+tag group:lighting
+
+
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+騾・・
+
+backlighting
+
+
+
+繝医ャ繝励Λ繧､繝・ぅ繝ｳ繧ｰ
+
+overlighting
+
+
+
+繧ｵ繧､繝峨Λ繧､繝・ぅ繝ｳ繧ｰ
+
+sidelighting
+
+
+
+證励＞繝ｩ繧､繝・ぅ繝ｳ繧ｰ
+
+underlighting
+
+
+
+髴ｲ蜃ｺ繧ｪ繝ｼ繝舌・
+・磯愆蜃ｺ繧｢繝ｳ繝繝ｼ縺ｯ縺ｪ縺・ｼ・/td>
+overexposure
+
+
+
+
+
+繧ｨ繝輔ぉ繧ｯ繝・/h2>
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+蜿礼ｲｾ
+
+impregnation, fertilization
+
+
+
+繧ｪ繝弱・繝医・
+謫ｬ髻ｳ隱・/td>
+sound effects
+
+
+
+譁ｭ髱｢蝗ｳ・井ｽ薙・荳翫↓陦ｨ遉ｺ・・/td>
+x-ray
+
+
+
+窶・ｭ仙ｮｮ縺ｮ荳ｭ縺ｫ邊ｾ蟄・/td>
+x-ray, holding cum, uterus
+
+
+
+譁ｭ髱｢蝗ｳ・井ｽ薙・螟悶↓蛻･繧ｳ繝槭〒陦ｨ遉ｺ・・/td>
+cross-section
+
+
+
+譁ｭ髱｢蝗ｳ縺ゅｊ縺ｮ荳ｭ蜃ｺ縺・/td>
+internal cumshot
+
+
+
+逞呎肇
+
+twitching
+
+
+
+
+
+繝昴せ繝医お繝輔ぉ繧ｯ繝・/h4>
+
+
+
+
+譌･譛ｬ隱・/th>
+繧ｿ繧ｰ
+
+
+
+蜑阪・繧ｱ
+
+blurry foreground
+
+
+
+閭梧勹繝懊こ
+
+blurry background
+
+
+
+繝懊こ
+
+bokeh
+
+
+
+濶ｲ蜿主ｷｮ
+
+chromatic aberration
+
+
+
+陲ｫ蜀咏阜豺ｱ蠎ｦ
+
+depth of field
+
+
+
+蜻ｨ霎ｺ貂帛・
+
+vignetting
+
+
+
+騾・・
+
+backlighting
+
+
+
+繝ｬ繝ｳ繧ｺ繝輔Ξ繧｢
+
+lens flare
+
+
+
+蜈画擅
+
+diffraction spikes
+
+
+
+繝輔ぅ繝ｫ繝繧ｰ繝ｬ繧､繝ｳ
+
+film grain
+
+
+
+遨ｺ豌鈴□霑第ｳ・/td>
+atmospheric perspective
+
+
+
+繝悶Ν繝ｼ繝繝ｻ逋ｺ蜈・/td>
+bloom
+
+
+
+
+
+
+            
+
+
+
+
+
+繧ｫ繝・ざ繝ｪ
+
+
+
+
+
+莨夊ｨ・/a>
+
+
+blender
+
+
+
+霆・/a>
+
+
+遒ｺ邇・ｵｱ險・/a>
+
+
+豕募ｾ・/a>
+
+
+
+
+
+
+豺ｱ螻､蟄ｦ鄙・/a>
+
+
+PC
+
+
+
+Linux
+
+
+
+unity
+
+
+
+縺昴・莉・/a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      /* Chrome, Edge, Safari逕ｨ */
+      #original-text-tooltip::-webkit-scrollbar {
+        width: 10px;
+        background: transparent;
+      }
+
+      #original-text-tooltip::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 9999px;
+      }
+
+      #original-text-tooltip::-webkit-scrollbar-thumb {
+        background-color: rgba(148, 163, 184, 0.5);
+        border-radius: 9999px;
+        border: 1px solid transparent;
+        background-clip: padding-box;
+        transition: background-color 0.2s ease-out;
+      }
+
+      #original-text-tooltip::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(148, 163, 184, 0.7);
+        background-clip: padding-box;
+      }
+
+      /* Firefox逕ｨ */
+      #original-text-tooltip {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(148, 163, 184, 0.5) transparent;
+      }
+    
+
+
+
+蜴滓枚:
+
+
+
+
+
+
+
+
+
+
+
