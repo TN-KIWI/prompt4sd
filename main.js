@@ -5,8 +5,6 @@ const TAG_DATA = {
             { nameJa: "女が馬乗り/逆正常位", desc: "girl on top, cowgirl", value: "cowgirl position" },
             { nameJa: "背面騎乗位", desc: "reverse cowgirl", value: "reverse cowgirl position" },
             { nameJa: "側位", desc: "spooning", value: "spooning" },
-            { nameJa: "仰向け", desc: "on back", value: "on back" },
-            { nameJa: "うつ伏せ", desc: "on stomach", value: "on stomach" },
             { nameJa: "対面座位", desc: "upright straddle", value: "upright straddle" },
             { nameJa: "逆背面座位", desc: "reverse upright straddle", value: "reverse upright straddle" },
             { nameJa: "対面体位 / 立ちバック", desc: "standing sex", value: "standing sex" },
@@ -21,9 +19,6 @@ const TAG_DATA = {
             { nameJa: "女体盛", desc: "nyotaimori", value: "nyotaimori" },
             { nameJa: "体の上に食べ物", desc: "food on body", value: "food on body" },
             { nameJa: "胸の上に食べ物", desc: "food on breasts", value: "food on breasts" },
-            { nameJa: "人の上に寝ている", desc: "lying on person", value: "lying on person" },
-            { nameJa: "脚の上に座る", desc: "sitting on lap", value: "sitting on lap" },
-            { nameJa: "膝枕", desc: "lap pillow", value: "lap pillow" },
             { nameJa: "一部水中構図", desc: "partially underwater", value: "partially underwater shot" }
         ],
         "乳系プレイ": [
@@ -81,6 +76,11 @@ const TAG_DATA = {
             { nameJa: "M字開脚", desc: "m legs", value: "m legs" },
             { nameJa: "内股", desc: "pigeon-toed", value: "pigeon-toed" },
             { nameJa: "もたれかかる", desc: "reclining", value: "reclining" },
+            { nameJa: "仰向け", desc: "on back", value: "on back" },
+            { nameJa: "うつ伏せ", desc: "on stomach", value: "on stomach" },
+            { nameJa: "人の上に寝ている", desc: "lying on person", value: "lying on person" },
+            { nameJa: "脚の上に座る", desc: "sitting on lap", value: "sitting on lap" },
+            { nameJa: "膝枕", desc: "lap pillow", value: "lap pillow" },
             { nameJa: "手ブラ", desc: "covering breasts", value: "covering breasts" }
         ]
     },
@@ -126,171 +126,131 @@ const TAG_DATA = {
             { nameJa: "前貼り", desc: "maebari", value: "maebari" }
         ]
     },
-    "ハンドサイン": {
-        "基本": [
-            { nameJa: "貫通サイン", desc: "penetration gesture", value: "penetration gesture" },
-            { nameJa: "エア手コキ", desc: "handjob gesture", value: "handjob gesture" },
-            { nameJa: "エアフェラ", desc: "fellatio gesture", value: "fellatio gesture" },
-            { nameJa: "ピース", desc: "v", value: "v" },
-            { nameJa: "ダブルピース", desc: "double v", value: "double v" },
-            { nameJa: "手でハート", desc: "heart hands", value: "heart hands" }
-        ]
-    },
     "男": {
         "基本": [
             { nameJa: "マッチョ", desc: "muscular male", value: "muscular male" },
             { nameJa: "おじさん", desc: "mature male", value: "mature male" },
             { nameJa: "アグリーバスタード", desc: "ugly bastard", value: "ugly bastard" },
             { nameJa: "カオナシ", desc: "faceless male", value: "faceless male" }
-        ]
-    },
-    "ペニス": {
-        "基本": [
+        ],
+        "ペニス": [
             { nameJa: "ペニス", desc: "penis", value: "penis" },
             { nameJa: "勃起", desc: "erection", value: "erection" },
             { nameJa: "包茎", desc: "foreskin", value: "foreskin" }
         ]
     },
-    "精液": {
-        "基本": [
+    "液体": {
+        "精液": [
             { nameJa: "精液", desc: "cum", value: "cum" },
             { nameJa: "中出し", desc: "cum in pussy", value: "cum in pussy" },
             { nameJa: "ガマン汁", desc: "precum", value: "precum" },
             { nameJa: "ザーメンブリッジ", desc: "cum string", value: "cum string" }
-        ]
-    },
-    "愛液": {
-        "基本": [
+        ],
+        "愛液": [
             { nameJa: "愛液", desc: "pussy juice", value: "pussy juice" },
             { nameJa: "愛液跡", desc: "pussy juice stain", value: "pussy juice stain" }
-        ]
-    },
-    "触手": {
-        "基本": [
-            { nameJa: "触手", desc: "tentacles", value: "tentacles" },
-            { nameJa: "触手姦", desc: "tentacle sex", value: "tentacle sex" }
-        ]
-    },
-    "淫紋": {
-        "基本": [
-            { nameJa: "淫紋", desc: "pubic tattoo", value: "pubic tattoo" }
-        ]
-    },
-    "バイブ・ディルド": {
-        "基本": [
-            { nameJa: "バイブ", desc: "vibrator", value: "vibrator" },
-            { nameJa: "ディルド", desc: "dildo", value: "dildo" },
-            { nameJa: "異物挿入", desc: "object insertion", value: "vaginal object insertion" }
-        ]
-    },
-    "おしっこ": {
-        "基本": [
+        ],
+        "おしっこ": [
             { nameJa: "放尿", desc: "peeing", value: "peeing" },
             { nameJa: "おもらし", desc: "peeing self", value: "peeing self" }
         ]
     },
-    "女性器": {
-        "基本": [
+    "その他": {
+        "ハンドサイン": [
+            { nameJa: "貫通サイン", desc: "penetration gesture", value: "penetration gesture" },
+            { nameJa: "エア手コキ", desc: "handjob gesture", value: "handjob gesture" },
+            { nameJa: "エアフェラ", desc: "fellatio gesture", value: "fellatio gesture" },
+            { nameJa: "ピース", desc: "v", value: "v" },
+            { nameJa: "ダブルピース", desc: "double v", value: "double v" },
+            { nameJa: "手でハート", desc: "heart hands", value: "heart hands" }
+        ],
+        "触手": [
+            { nameJa: "触手", desc: "tentacles", value: "tentacles" },
+            { nameJa: "触手姦", desc: "tentacle sex", value: "tentacle sex" }
+        ],
+        "淫紋": [
+            { nameJa: "淫紋", desc: "pubic tattoo", value: "pubic tattoo" }
+        ],
+        "バイブ・ディルド": [
+            { nameJa: "バイブ", desc: "vibrator", value: "vibrator" },
+            { nameJa: "ディルド", desc: "dildo", value: "dildo" },
+            { nameJa: "異物挿入", desc: "object insertion", value: "vaginal object insertion" }
+        ],
+        "服": [
+            { nameJa: "食い込み", desc: "skindentation", value: "skindentation" },
+            { nameJa: "ブラチラ/パンチラ", desc: "peek", value: "bra peek" }
+        ],
+        "拘束": [
+            { nameJa: "首輪", desc: "collar", value: "collar" },
+            { nameJa: "手錠", desc: "handcuffs", value: "handcuffs" },
+            { nameJa: "束縛", desc: "bound", value: "bound wrists" }
+        ],
+        "表情": [
+            { nameJa: "オホ顔", desc: "puckered lips", value: "puckered lips, rolling eyes" },
+            { nameJa: "首絞め", desc: "strangling", value: "strangling" },
+            { nameJa: "断面図", desc: "x-ray", value: "x-ray" },
+            { nameJa: "痙攣", desc: "twitching", value: "twitching" }
+        ]
+    },
+    "部位": {
+        "女性器": [
             { nameJa: "女性器", desc: "pussy", value: "pussy" },
             { nameJa: "マンスジ", desc: "cleft of venus", value: "cleft of venus" },
             { nameJa: "陰毛", desc: "pubic hair", value: "pubic hair" },
             { nameJa: "くぱぁ", desc: "spread pussy", value: "spread pussy" }
-        ]
-    },
-    "アヌス": {
-        "基本": [
+        ],
+        "アヌス": [
             { nameJa: "アヌス", desc: "anus", value: "anus" },
             { nameJa: "アナル(挿入)", desc: "anal", value: "anal" }
-        ]
-    },
-    "腹": {
-        "基本": [
+        ],
+        "腹": [
             { nameJa: "シックスパック", desc: "abs", value: "abs" },
             { nameJa: "イカ腹/へそ出し", desc: "midriff", value: "midriff" }
-        ]
-    },
-    "尻": {
-        "基本": [
+        ],
+        "尻": [
             { nameJa: "デカ尻", desc: "wide hip", value: "wide hip" },
             { nameJa: "半ケツ", desc: "butt crack", value: "butt crack" },
             { nameJa: "下尻", desc: "underbutt", value: "underbutt" }
-        ]
-    },
-    "乳": {
-        "基本": [
+        ],
+        "乳": [
             { nameJa: "垂れ乳", desc: "sagging breasts", value: "sagging breasts" },
             { nameJa: "乳揺れ", desc: "bouncing breasts", value: "bouncing breasts" },
             { nameJa: "パイスラ", desc: "strap between breasts", value: "strap between breasts" }
-        ]
-    },
-    "乳首/ピアス": {
-        "基本": [
+        ],
+        "乳首/ピアス": [
             { nameJa: "乳首", desc: "nipples", value: "nipples" },
             { nameJa: "陥没乳首", desc: "inverted nipples", value: "inverted nipples" },
             { nameJa: "乳首ピアス", desc: "nipple piercing", value: "nipple piercing" }
-        ]
-    },
-    "乳動作": {
-        "基本": [
+        ],
+        "乳動作": [
             { nameJa: "胸を揉む", desc: "grabbing breast", value: "grabbing another's breast" },
             { nameJa: "乳挟み", desc: "between breasts", value: "between breasts" },
             { nameJa: "乳押し付け", desc: "breast press", value: "breast press" }
-        ]
-    },
-    "肩/腕": {
-        "基本": [
+        ],
+        "肩/腕": [
             { nameJa: "肩出し", desc: "bare shoulders", value: "bare shoulders" },
             { nameJa: "脇見せ", desc: "arms up", value: "arms up" },
             { nameJa: "後ろ手縛り", desc: "arms behind back", value: "arms behind back" }
         ]
     },
-    "服": {
-        "基本": [
-            { nameJa: "食い込み", desc: "skindentation", value: "skindentation" },
-            { nameJa: "ブラチラ/パンチラ", desc: "peek", value: "bra peek" }
-        ]
-    },
-    "拘束": {
-        "基本": [
-            { nameJa: "首輪", desc: "collar", value: "collar" },
-            { nameJa: "手錠", desc: "handcuffs", value: "handcuffs" },
-            { nameJa: "束縛", desc: "bound", value: "bound wrists" }
-        ]
-    },
-    "表情": {
-        "基本": [
-            { nameJa: "オホ顔", desc: "puckered lips", value: "puckered lips, rolling eyes" },
-            { nameJa: "首絞め", desc: "strangling", value: "strangling" }
-        ]
-    },
-    "アングル": {
-        "基本": [
+    "撮影": {
+        "アングル": [
             { nameJa: "真正面", desc: "straight-on", value: "straight-on" },
             { nameJa: "後ろから", desc: "from behind", value: "from behind" },
             { nameJa: "真横から", desc: "from side", value: "from side" },
             { nameJa: "ハイアングル", desc: "from above", value: "from above" },
             { nameJa: "ローアングル", desc: "from below", value: "from below" },
             { nameJa: "主観視点", desc: "pov", value: "pov" }
-        ]
-    },
-    "画角": {
-        "基本": [
+        ],
+        "画角": [
             { nameJa: "顔アップ", desc: "close-up", value: "close-up" },
             { nameJa: "上半身", desc: "upper body", value: "upper body" },
             { nameJa: "全身", desc: "full body", value: "full body" }
-        ]
-    },
-    "ライティング": {
-        "基本": [
+        ],
+        "ライティング": [
             { nameJa: "逆光", desc: "backlighting", value: "backlighting" },
             { nameJa: "サイド光", desc: "sidelighting", value: "sidelighting" },
-            { nameJa: "シネマティック", desc: "cinematic", value: "cinematic lighting" }
-        ]
-    },
-    "エフェクト": {
-        "基本": [
-            { nameJa: "断面図", desc: "x-ray", value: "x-ray" },
-            { nameJa: "痙攣", desc: "twitching", value: "twitching" },
+            { nameJa: "シネマティック", desc: "cinematic", value: "cinematic lighting" },
             { nameJa: "ボケ", desc: "bokeh", value: "bokeh" }
         ]
     }
