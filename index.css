@@ -180,7 +180,7 @@ h3 {
 /* Category Tabs */
 .category-tabs {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     margin-bottom: 1.5rem;
     flex-wrap: wrap;
     justify-content: center;
@@ -190,12 +190,12 @@ h3 {
     background: transparent;
     border: none;
     color: var(--text-muted);
-    padding: 0.6rem 1.2rem;
+    padding: 0.5rem 1rem;
     cursor: pointer;
     font-weight: 600;
     position: relative;
     transition: var(--transition);
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .tab-btn.active {
@@ -213,10 +213,35 @@ h3 {
     border-radius: 2px;
 }
 
+/* Search Container */
+.search-container {
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+}
+
+#tag-search {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: var(--text-main);
+    padding: 0.8rem;
+    font-size: 1rem;
+    outline: none;
+}
+
+#tag-search::placeholder {
+    color: var(--text-muted);
+}
+
 /* Table Wrapper and Table */
 .scroll-wrapper {
     overflow-x: auto;
     margin-top: 1rem;
+    max-height: 600px;
+    /* Enable vertical scroll for table */
+    overflow-y: auto;
 }
 
 #prompt-table {
