@@ -1,141 +1,188 @@
 const TAG_DATA = {
-    base: [
-        { nameJa: "傑作", desc: "作品のクオリティを底上げする必須タグ", value: "masterpiece" },
-        { nameJa: "最高品質", desc: "ディテールと質感を向上させる", value: "best quality" },
-        { nameJa: "高解像度", desc: "きめ細やかな描写", value: "highres" },
-        { nameJa: "8K解像度", desc: "極めて精細な壁紙品質", value: "8k wallpaper" },
-        { nameJa: "シネマティック照明", desc: "実写映画のような光の演出", value: "cinematic lighting" },
-        { nameJa: "被写界深度", desc: "背景をぼかして被写体を際立たせる", value: "depth of field" },
-        { nameJa: "レイトレーシング", desc: "光の反射をリアルにシミュレート", value: "ray tracing" },
-        { nameJa: "シャープフォーカス", desc: "ピントがはっきり合った描写", value: "sharp focus" },
-        { nameJa: "詳細な背景", desc: "背景の描き込みを増やす", value: "detailed background" },
-        { nameJa: "超詳細", desc: "細部まで徹底的に描き込む", value: "ultra-detailed" }
-    ],
-    character: [
-        { nameJa: "女の子", desc: "1人の女性キャラクター", value: "1girl" },
-        { nameJa: "男の子", desc: "1人の男性キャラクター", value: "1boy" },
-        { nameJa: "カップル", desc: "男女のペア", value: "2persons, couple" },
-        { nameJa: "ロリ", desc: "幼い少女", value: "loli" },
-        { nameJa: "ショタ", desc: "幼い少年", value: "shota" },
-        { nameJa: "騎士", desc: "鎧を着た戦士", value: "knight" },
-        { nameJa: "エルフ", desc: "尖った耳を持つ幻想種", value: "elf" },
-        { nameJa: "吸血鬼", desc: "牙を持つ夜の住人", value: "vampire" },
-        { nameJa: "魔女", desc: "魔法使いの女性", value: "witch" },
-        { nameJa: "メイド", desc: "奉仕の制服を着た女性", value: "maid" },
-        { nameJa: "巫女", desc: "日本の伝統的な聖職者", value: "miko" },
-        { nameJa: "ナース", desc: "看護師", value: "nurse" },
-        { nameJa: "女子高生", desc: "日本の制服を着た学生", value: "japanese school girl" },
-        { nameJa: "サイボーグ", desc: "機械化された人間", value: "cyborg" },
-        { nameJa: "天使", desc: "背中に羽を持つ聖なる存在", value: "angel" },
-        { nameJa: "悪魔", desc: "角や尻尾を持つ存在", value: "demon" }
-    ],
-    hair: [
-        { nameJa: "ロングヘア", desc: "長い髪", value: "long hair" },
-        { nameJa: "ショートヘア", desc: "短い髪", value: "short hair" },
-        { nameJa: "ツインテール", desc: "左右で結んだ髪", value: "twintails" },
-        { nameJa: "ポニーテール", desc: "後ろで一本に結んだ髪", value: "ponytail" },
-        { nameJa: "ボブカット", desc: "おかっぱ頭", value: "bob cut" },
-        { nameJa: "姫カット", desc: "伝統的な日本の髪型", value: "hime cut" },
-        { nameJa: "サイドポニー", desc: "横で結んだ髪", value: "side ponytail" },
-        { nameJa: "お団子頭", desc: "髪を丸くまとめたスタイル", value: "hair bun" },
-        { nameJa: "ドリルヘア", desc: "縦ロールの強い髪", value: "drill hair" },
-        { nameJa: "乱れ髪", desc: "少し崩れた髪の毛", value: "messy hair" },
-        { nameJa: "銀髪", desc: "銀色の髪", value: "silver hair" },
-        { nameJa: "金髪", desc: "金色の髪", value: "blonde hair" },
-        { nameJa: "赤髪", desc: "赤色の髪", value: "red hair" },
-        { nameJa: "ピンク髪", desc: "桃色の髪", value: "pink hair" },
-        { nameJa: "アホ毛", desc: "一本ぴょこんと跳ねた髪", value: "ahoge" }
-    ],
-    face: [
-        { nameJa: "微笑み", desc: "穏やかな笑顔", value: "smiling" },
-        { nameJa: "照れ顔", desc: "赤面した顔", value: "blushing" },
-        { nameJa: "ドヤ顔", desc: "得意げな表情", value: "smirking" },
-        { nameJa: "泣き顔", desc: "涙を流す表情", value: "crying" },
-        { nameJa: "怒り顔", desc: "怒っている表情", value: "angry" },
-        { nameJa: "驚き顔", desc: "びっくりした表情", value: "surprised" },
-        { nameJa: "ジト目", desc: "冷ややかな視線", value: "jitome" },
-        { nameJa: "釣り目", desc: "目尻が上がった目", value: "tsurime" },
-        { nameJa: "タレ目", desc: "目尻が下がった目", value: "tareme" },
-        { nameJa: "オッドアイ", desc: "左右で色が違う瞳", value: "heterochromia" },
-        { nameJa: "猫目", desc: "瞳孔が細い目", value: "slit pupils" },
-        { nameJa: "口を開ける", desc: "口を開いた状態", value: "open mouth" },
-        { nameJa: "舌出し", desc: "舌をぺろっと出した顔", value: "tongue out" }
-    ],
-    clothes: [
-        { nameJa: "セーラー服", desc: "海軍風の学生服", value: "sailor suit" },
-        { nameJa: "ブレザー", desc: "ジャケット形式の学生服", value: "school blazer" },
-        { nameJa: "体操服", desc: "学校用のスポーツウェア", value: "gym uniform" },
-        { nameJa: "スク水", desc: "学校指定の水着", value: "school swimsuit" },
-        { nameJa: "着物", desc: "日本の伝統衣装", value: "kimono" },
-        { nameJa: "ドレス", desc: "華やかな洋装", value: "dress" },
-        { nameJa: "ゴスロリ", desc: "ゴシック・アンド・ロリータ", value: "gothic lolita" },
-        { nameJa: "チャイナドレス", desc: "中国の伝統的なドレス", value: "china dress" },
-        { nameJa: "ビキニ", desc: "露出度の高い水着", value: "bikini" },
-        { nameJa: "ワンピース", desc: "繋がった衣服", value: "one-piece dress" },
-        { nameJa: "パーカー", desc: "フード付きのスウェット", value: "hoodie" },
-        { nameJa: "オーバーサイズ", desc: "ダボっとした大きめの服", value: "oversized clothes" },
-        { nameJa: "ニーハイ", desc: "膝上の靴下", value: "knee highs" },
-        { nameJa: "タイツ", desc: "脚を覆うストッキング", value: "tights" }
-    ],
-    pose: [
-        { nameJa: "立ちポーズ", desc: "立っている状態", value: "standing" },
-        { nameJa: "座りポーズ", desc: "座っている状態", value: "sitting" },
-        { nameJa: "寝そべり", desc: "横たわった状態", value: "lying flat" },
-        { nameJa: "膝立ち", desc: "膝をついた状態", value: "kneeling" },
-        { nameJa: "歩いている", desc: "歩行動作", value: "walking" },
-        { nameJa: "走っている", desc: "走行動作", value: "running" },
-        { nameJa: "見上げる", desc: "上を見ている", value: "looking up" },
-        { nameJa: "見下ろす", desc: "下を見ている", value: "looking down" },
-        { nameJa: "後ろ姿", desc: "背後からの視点", value: "from behind" },
-        { nameJa: "アオリ", desc: "低い位置からのアングル", value: "from below" },
-        { nameJa: "俯瞰", desc: "高い位置からのアングル", value: "from above" },
-        { nameJa: "アップショット", desc: "被写体に寄った構図", value: "close-up" },
-        { nameJa: "カウボーイショット", desc: "太ももから上の構図", value: "cowboy shot" },
-        { nameJa: "全身ショット", desc: "頭から爪先までの構図", value: "full body" }
-    ],
-    style: [
-        { nameJa: "アニメ風", desc: "2Dのアニメーションスタイル", value: "anime style" },
-        { nameJa: "実写風", desc: "超リアルな写真質感", value: "photorealistic" },
-        { nameJa: "水彩画", desc: "淡い色の重なり", value: "watercolor" },
-        { nameJa: "油絵", desc: "深みのある絵画スタイル", value: "oil painting" },
-        { nameJa: "スケッチ", desc: "ラフな描き込み", value: "sketch" },
-        { nameJa: "サイバーパンク", desc: "ネオンとテクノロジー", value: "cyberpunk" },
-        { nameJa: "スチームパンク", desc: "蒸気機関と真鍮", value: "steampunk" },
-        { nameJa: "ファンタジー", desc: "魔法の世界観", value: "fantasy" },
-        { nameJa: "ジブリ風", desc: "温かみのあるアニメ背景", value: "studio ghibli style" },
-        { nameJa: "ピクセルアート", desc: "レトロなドット絵", value: "pixel art" }
-    ],
-    scene: [
-        { nameJa: "室内", desc: "部屋の中", value: "indoors" },
-        { nameJa: "屋外", desc: "外の風景", value: "outdoors" },
-        { nameJa: "教室", desc: "学校の部屋", value: "classroom" },
-        { nameJa: "ビーチ", desc: "砂浜と海", value: "beach" },
-        { nameJa: "森", desc: "木々に囲まれた場所", value: "forest" },
-        { nameJa: "街並み", desc: "都市の風景", value: "cityscape" },
-        { nameJa: "カフェ", desc: "喫茶店の中", value: "cafe" },
-        { nameJa: "宇宙", desc: "星々の間", value: "outer space" },
-        { nameJa: "サイバーシティ", desc: "近未来の都市", value: "night city" },
-        { nameJa: "夕焼け", desc: "オレンジ色の空", value: "sunset" },
-        { nameJa: "夜空", desc: "星や月が見える空", value: "night sky" }
-    ],
-    mature: [
-        { nameJa: "セクシー", desc: "色気のある雰囲気", value: "sexy" },
-        { nameJa: "ランジェリー", desc: "下着姿", value: "lingerie" },
-        { nameJa: "ビキニ", desc: "セパレートの水着", value: "bikini" },
-        { nameJa: "透け感", desc: "衣服が透けている状態", value: "see-through" },
-        { nameJa: "開脚", desc: "脚を開いたポーズ", value: "spread legs" },
-        { nameJa: "ハート目", desc: "瞳がハートに", value: "heart-shaped pupils" },
-        { nameJa: "アヘ顔", desc: "快楽に溺れた表情", value: "ahegao" },
-        { nameJa: "全裸", desc: "服を着ていない", value: "naked" },
-        { nameJa: "胸のアップ", desc: "バストの強調", value: "large breasts focus" }
-    ]
+    general: {
+        "クオリティ": [
+            { nameJa: "傑作", desc: "クオリティを底上げ", value: "masterpiece" },
+            { nameJa: "最高品質", desc: "ディテール向上", value: "best quality" },
+            { nameJa: "高解像度", desc: "きめ細やかな描写", value: "highres" },
+            { nameJa: "8K解像度", desc: "精細な壁紙品質", value: "8k wallpaper" },
+            { nameJa: "超詳細", desc: "細部まで描き込む", value: "ultra-detailed" }
+        ],
+        "カメラ/アングル": [
+            { nameJa: "真正面", desc: "straight-on", value: "straight-on" },
+            { nameJa: "後ろ", desc: "from behind", value: "from behind" },
+            { nameJa: "真横", desc: "from side", value: "from side" },
+            { nameJa: "ハイアングル", desc: "from above", value: "from above" },
+            { nameJa: "ローアングル", desc: "from below", value: "from below" },
+            { nameJa: "広角ショット", desc: "wide shot", value: "wide shot" },
+            { nameJa: "俯瞰", desc: "birds eye view", value: "birds eye view" },
+            { nameJa: "斜め構図", desc: "dutch angle", value: "dutch angle" },
+            { nameJa: "魚眼レンズ", desc: "fisheye", value: "fisheye" }
+        ],
+        "画角/構成": [
+            { nameJa: "顔アップ", desc: "close-up", value: "close-up" },
+            { nameJa: "ポートレート", desc: "portrait", value: "portrait" },
+            { nameJa: "上半身", desc: "upper body", value: "upper body" },
+            { nameJa: "膝上", desc: "cowboy shot", value: "cowboy shot" },
+            { nameJa: "全身", desc: "full body", value: "full body" }
+        ],
+        "照明/効果": [
+            { nameJa: "シネマティック", desc: "cinematic lighting", value: "cinematic lighting" },
+            { nameJa: "逆光", desc: "backlighting", value: "backlighting" },
+            { nameJa: "サイド照明", desc: "sidelighting", value: "sidelighting" },
+            { nameJa: "レンズフレア", desc: "lens flare", value: "lens flare" },
+            { nameJa: "周辺減光", desc: "vignetting", value: "vignetting" },
+            { nameJa: "色収差", desc: "chromatic aberration", value: "chromatic aberration" }
+        ]
+    },
+    position: {
+        "体位(一般)": [
+            { nameJa: "正常位", desc: "missionary", value: "missionary" },
+            { nameJa: "騎乗位", desc: "cowgirl position", value: "cowgirl position" },
+            { nameJa: "背面騎乗位", desc: "reverse cowgirl position", value: "reverse cowgirl position" },
+            { nameJa: "側位", desc: "spooning", value: "spooning" },
+            { nameJa: "対面座位", desc: "upright straddle", value: "upright straddle" },
+            { nameJa: "立ちバック", desc: "standing sex", value: "standing sex" },
+            { nameJa: "だいしゅきホールド", desc: "leg lock", value: "leg lock" },
+            { nameJa: "種付けプレス", desc: "mating press", value: "mating press" },
+            { nameJa: "駅弁", desc: "suspended congress", value: "suspended congress" }
+        ],
+        "ポーズ": [
+            { nameJa: "膝立ち", desc: "kneeling", value: "kneeling" },
+            { nameJa: "四つん這い", desc: "all fours", value: "all fours" },
+            { nameJa: "M字開脚", desc: "m legs", value: "m legs" },
+            { nameJa: "I 字バランス", desc: "standing split", value: "standing split" },
+            { nameJa: "割座", desc: "wariza", value: "wariza" },
+            { nameJa: "あぐら", desc: "indian style", value: "indian style" },
+            { nameJa: "蹲踞", desc: "squatting", value: "squatting" },
+            { nameJa: "体育座り", desc: "hugging own legs", value: "hugging own legs" }
+        ],
+        "複数人": [
+            { nameJa: "男女", desc: "hetero", value: "hetero" },
+            { nameJa: "女女", desc: "yuri", value: "yuri" },
+            { nameJa: "3P(女女男)", desc: "ffm threesome", value: "ffm threesome" },
+            { nameJa: "3P(女男男)", desc: "mmf threesome", value: "mmf threesome" },
+            { nameJa: "グループ", desc: "group sex", value: "group sex" },
+            { nameJa: "乱交", desc: "orgy", value: "orgy" },
+            { nameJa: "輪姦", desc: "gangbang", value: "gangbang" }
+        ],
+        "非挿入系": [
+            { nameJa: "素股", desc: "grinding", value: "grinding" },
+            { nameJa: "太ももコキ", desc: "thigh sex", value: "thigh sex" },
+            { nameJa: "貝合わせ", desc: "tribadism", value: "tribadism" },
+            { nameJa: "手コキ", desc: "handjob", value: "handjob" },
+            { nameJa: "オナニー", desc: "female masturbation", value: "female masturbation" }
+        ]
+    },
+    clothing: {
+        "全身衣装": [
+            { nameJa: "レオタード", desc: "leotard", value: "leotard" },
+            { nameJa: "ボディースーツ", desc: "bodysuit", value: "bodysuit" },
+            { nameJa: "ビキニ", desc: "bikini", value: "bikini" },
+            { nameJa: "マイクロビキニ", desc: "micro bikini", value: "micro bikini" },
+            { nameJa: "スク水", desc: "school swimsuit", value: "school swimsuit" },
+            { nameJa: "バニーガール", desc: "playboy bunny", value: "playboy bunny" },
+            { nameJa: "ベビードール", desc: "babydoll", value: "babydoll" },
+            { nameJa: "全身タイツ", desc: "bodystocking", value: "bodystocking" }
+        ],
+        "上半身": [
+            { nameJa: "ブラジャー", desc: "bra", value: "bra" },
+            { nameJa: "スポブラ", desc: "sports bra", value: "sports bra" },
+            { nameJa: "ニップレス", desc: "pasties", value: "pasties" },
+            { nameJa: "キャミソール", desc: "camisole", value: "camisole" },
+            { nameJa: "トップレス", desc: "topless female", value: "topless female" }
+        ],
+        "下半身": [
+            { nameJa: "ショーツ", desc: "panties", value: "panties" },
+            { nameJa: "縞パン", desc: "striped panties", value: "striped panties" },
+            { nameJa: "Tバック", desc: "thong", value: "thong" },
+            { nameJa: "オープンクロッチ", desc: "crotchless panties", value: "crotchless panties" },
+            { nameJa: "ニーハイ", desc: "thighhighs", value: "thighhighs" },
+            { nameJa: "ガーターベルト", desc: "garter belt", value: "garter belt" }
+        ],
+        "拘束/装備": [
+            { nameJa: "首輪", desc: "collar", value: "collar" },
+            { nameJa: "手錠", desc: "handcuffs", value: "handcuffs" },
+            { nameJa: "目隠し", desc: "blindfold", value: "blindfold" },
+            { nameJa: "猿轡", desc: "gag", value: "gag" },
+            { nameJa: "バイブ", desc: "vibrator", value: "vibrator" },
+            { nameJa: "アナルプラグ", desc: "butt plug", value: "butt plug" }
+        ]
+    },
+    body: {
+        "性器": [
+            { nameJa: "女性器", desc: "pussy", value: "pussy" },
+            { nameJa: "くぱぁ", desc: "spread pussy", value: "spread pussy" },
+            { nameJa: "陰毛", desc: "pubic hair", value: "pubic hair" },
+            { nameJa: "アヌス", desc: "anus", value: "anus" },
+            { nameJa: "ペニス", desc: "penis", value: "penis" }
+        ],
+        "乳/胸": [
+            { nameJa: "乳", desc: "breasts", value: "breasts" },
+            { nameJa: "乳首", desc: "nipples", value: "nipples" },
+            { nameJa: "垂れ乳", desc: "sagging breasts", value: "sagging breasts" },
+            { nameJa: "乳揺れ", desc: "bouncing breasts", value: "bouncing breasts" },
+            { nameJa: "乳首ピアス", desc: "nipple piercing", value: "nipple piercing" }
+        ],
+        "尻/脚/腰": [
+            { nameJa: "尻", desc: "ass", value: "ass" },
+            { nameJa: "デカ尻", desc: "wide hip", value: "wide hip" },
+            { nameJa: "腹筋", desc: "abs", value: "abs" },
+            { nameJa: "腰", desc: "waist", value: "waist" },
+            { nameJa: "太もも", desc: "thighs", value: "thighs" }
+        ],
+        "表情/顔": [
+            { nameJa: "微笑み", desc: "smiling", value: "smiling" },
+            { nameJa: "照れ顔", desc: "blushing", value: "blushing" },
+            { nameJa: "アヘ顔", desc: "ahegao", value: "ahegao" },
+            { nameJa: "オホ顔", desc: "puckered lips, rolling eyes", value: "puckered lips, rolling eyes" },
+            { nameJa: "舌出し", desc: "tongue out", value: "tongue out" }
+        ]
+    },
+    action: {
+        "行為/プレイ": [
+            { nameJa: "フェラ", desc: "fellatio", value: "fellatio" },
+            { nameJa: "イラマチオ", desc: "irrumatio", value: "irrumatio" },
+            { nameJa: "ディープスロート", desc: "deepthroat", value: "deepthroat" },
+            { nameJa: "ぱふぱふ", desc: "head between breasts", value: "head between breasts" },
+            { nameJa: "首絞め", desc: "strangling", value: "strangling" }
+        ],
+        "分泌液": [
+            { nameJa: "精液", desc: "cum", value: "cum" },
+            { nameJa: "中出し", desc: "cum in pussy", value: "cum in pussy" },
+            { nameJa: "ガマン汁", desc: "precum", value: "precum" },
+            { nameJa: "愛液", desc: "pussy juice", value: "pussy juice" },
+            { nameJa: "放尿", desc: "peeing", value: "peeing" }
+        ],
+        "特殊": [
+            { nameJa: "受精", desc: "impregnation", value: "impregnation" },
+            { nameJa: "断面図", desc: "x-ray", value: "x-ray" },
+            { nameJa: "触手", desc: "tentacles", value: "tentacles" },
+            { nameJa: "淫紋", desc: "pubic tattoo", value: "pubic tattoo" }
+        ]
+    },
+    scene: {
+        "室内": [
+            { nameJa: "室内", desc: "indoors", value: "indoors" },
+            { nameJa: "教室", desc: "classroom", value: "classroom" },
+            { nameJa: "カフェ", desc: "cafe", value: "cafe" },
+            { nameJa: "寝室", desc: "bedroom", value: "bedroom" }
+        ],
+        "屋外": [
+            { nameJa: "屋外", desc: "outdoors", value: "outdoors" },
+            { nameJa: "ビーチ", desc: "beach", value: "beach" },
+            { nameJa: "森", desc: "forest", value: "forest" },
+            { nameJa: "夜空", desc: "night sky", value: "night sky" }
+        ]
+    }
 };
 
 let selectedTags = new Set();
-let currentCategory = 'base';
+let currentMainCategory = 'general';
+let currentSubCategory = '';
 let searchQuery = '';
 
 const tagContainer = document.getElementById('tag-container');
+const subTabContainer = document.getElementById('sub-category-tabs');
 const promptDisplay = document.getElementById('prompt-display');
 const copyBtn = document.getElementById('copy-btn');
 const clearBtn = document.getElementById('clear-btn');
@@ -146,15 +193,48 @@ const negPromptText = document.getElementById('negative-prompt-text');
 
 // Initialize
 function init() {
+    renderSubTabs();
     renderRows();
     setupEventListeners();
 }
 
+function renderSubTabs() {
+    subTabContainer.innerHTML = '';
+    const subCats = Object.keys(TAG_DATA[currentMainCategory]);
+
+    // Set default subcategory if none selected or if switching main category
+    if (!currentSubCategory || !TAG_DATA[currentMainCategory][currentSubCategory]) {
+        currentSubCategory = subCats[0];
+    }
+
+    subCats.forEach(sub => {
+        const btn = document.createElement('button');
+        btn.className = `sub-tab-btn ${sub === currentSubCategory ? 'active' : ''}`;
+        btn.textContent = sub;
+        btn.onclick = () => {
+            currentSubCategory = sub;
+            renderSubTabs();
+            renderRows();
+        };
+        subTabContainer.appendChild(btn);
+    });
+}
+
 function renderRows() {
     tagContainer.innerHTML = '';
-    const tags = TAG_DATA[currentCategory];
 
-    const filteredTags = tags.filter(tag =>
+    // Get tags from current sub-category or filter all in main category if searching
+    let tagsToShow = [];
+    if (searchQuery) {
+        // Search across ALL sub-categories in current main category
+        Object.values(TAG_DATA[currentMainCategory]).forEach(subTags => {
+            tagsToShow = tagsToShow.concat(subTags);
+        });
+    } else {
+        tagsToShow = TAG_DATA[currentMainCategory][currentSubCategory] || [];
+    }
+
+    const filteredTags = tagsToShow.filter(tag =>
         tag.nameJa.includes(searchQuery) ||
         tag.value.toLowerCase().includes(searchQuery.toLowerCase()) ||
         tag.desc.includes(searchQuery)
@@ -165,7 +245,11 @@ function renderRows() {
         return;
     }
 
-    filteredTags.forEach(tag => {
+    // Deduplicate if searching (though mostly shouldn't be needed)
+    const uniqueTags = Array.from(new Set(filteredTags.map(t => t.value)))
+        .map(val => filteredTags.find(t => t.value === val));
+
+    uniqueTags.forEach(tag => {
         const tr = document.createElement('tr');
         if (selectedTags.has(tag.value)) tr.classList.add('selected');
 
@@ -228,14 +312,14 @@ function updatePrompt() {
 }
 
 function setupEventListeners() {
-    // Tabs
+    // Main Tabs
     tabBtns.forEach(btn => {
         btn.onclick = () => {
             tabBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            currentCategory = btn.dataset.category;
-            searchInput.value = ''; // Reset search on tab change
-            searchQuery = '';
+            currentMainCategory = btn.dataset.category;
+            currentSubCategory = ''; // Reset sub-category
+            renderSubTabs();
             renderRows();
         };
     });
