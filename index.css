@@ -180,10 +180,24 @@ h3 {
 /* Category Tabs */
 .category-tabs {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     margin-bottom: 1.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) transparent;
+}
+
+.category-tabs::-webkit-scrollbar {
+    height: 4px;
+}
+
+.category-tabs::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border_radius: 2px;
+}
+
+justify-content: center;
 }
 
 .tab-btn {
