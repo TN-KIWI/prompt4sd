@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,47 +9,62 @@
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <header>
             <h1 class="gradient-text">prompt4sd</h1>
-            <p class="subtitle">Quickly build high-quality Stable Diffusion prompts.</p>
+            <p class="subtitle">Stable Diffusion プロンプト作成をよりスマートに。</p>
         </header>
 
         <section id="output-section" class="glass">
             <div class="output-header">
-                <h3>Current Prompt</h3>
-                <button id="copy-btn" class="btn primary">Copy to Clipboard</button>
+                <h3>現在のプロンプト</h3>
+                <button id="copy-btn" class="btn primary">コピーする</button>
             </div>
             <div id="prompt-display" class="prompt-box">
-                <span class="placeholder">Click tags below to start building your prompt...</span>
+                <span class="placeholder">下のテーブルから項目を選択してプロンプトを作成してください...</span>
             </div>
             <div class="output-footer">
-                <button id="clear-btn" class="btn outline">Clear All</button>
+                <button id="clear-btn" class="btn outline">すべてクリア</button>
             </div>
         </section>
 
         <main id="builder-main">
             <nav class="category-tabs">
-                <button class="tab-btn active" data-category="character">Character</button>
-                <button class="tab-btn" data-category="appearance">Appearance</button>
-                <button class="tab-btn" data-category="style">Style</button>
-                <button class="tab-btn" data-category="tech">Technical</button>
-                <button class="tab-btn" data-category="scene">Scene</button>
-                <button class="tab-btn" data-category="mature">Mature</button>
+                <button class="tab-btn active" data-category="character">キャラクター</button>
+                <button class="tab-btn" data-category="appearance">外見・特徴</button>
+                <button class="tab-btn" data-category="style">画風・スタイル</button>
+                <button class="tab-btn" data-category="tech">技術的設定</button>
+                <button class="tab-btn" data-category="scene">背景・シーン</button>
+                <button class="tab-btn" data-category="mature">成人向け</button>
             </nav>
 
-            <div id="tag-container" class="glass">
-                <!-- Tags will be dynamically populated by main.js -->
+            <div id="table-wrapper" class="glass scroll-wrapper">
+                <table id="prompt-table">
+                    <thead>
+                        <tr>
+                            <th class="col-name">日本語名</th>
+                            <th class="col-desc">説明</th>
+                            <th class="col-tag">プロンプト</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tag-container">
+                        <!-- main.jsによって動的に生成されます -->
+                    </tbody>
+                </table>
             </div>
         </main>
 
         <section id="settings" class="glass">
-            <h3>Negative Prompt Preset</h3>
+            <h3>ネガティブプロンプト プリセット</h3>
             <div class="negative-prompt-box">
-                <code id="negative-prompt-text">(worst quality, low quality:1.4), (greyscale, monochrome:1.1), cropped, dot, lowres, text, jpeg artifacts, signature, watermark, username, blurry, artist name, nightmare, bad anatomy, bad hands, malformed, extra digit, fewer digits</code>
+                <code
+                    id="negative-prompt-text">(worst quality, low quality:1.4), (greyscale, monochrome:1.1), cropped, dot, lowres, text, jpeg artifacts, signature, watermark, username, blurry, artist name, nightmare, bad anatomy, bad hands, malformed, extra digit, fewer digits</code>
                 <button id="copy-neg-btn" class="btn small">Copy</button>
             </div>
         </section>
@@ -60,4 +76,5 @@
 
     <script src="main.js"></script>
 </body>
+
 </html>

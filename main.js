@@ -1,98 +1,74 @@
 const TAG_DATA = {
     character: [
-        { label: "Girl", value: "1girl" },
-        { label: "Boy", value: "1boy" },
-        { label: "Couple", value: "2persons, couple" },
-        { label: "Knight", value: "knight" },
-        { label: "Elf", value: "elf" },
-        { label: "Witch", value: "witch" },
-        { label: "Cyborg", value: "cyborg" },
-        { label: "Student", value: "school student" },
-        { label: "Detective", value: "detective" },
-        { label: "Angel", value: "angel" },
-        { label: "Demon", value: "demon" },
-        { label: "Nurse", value: "nurse" },
-        { label: "Police", value: "police officer" },
-        { label: "Maid", value: "maid" },
-        { label: "Shrine Maiden", value: "miko" }
+        { nameJa: "女の子", desc: "一般的な女性キャラクター", value: "1girl" },
+        { nameJa: "男の子", desc: "一般的な男性キャラクター", value: "1boy" },
+        { nameJa: "カップル", desc: "男女ペア、または二人組", value: "2persons, couple" },
+        { nameJa: "騎士", desc: "鎧をまとった戦士", value: "knight" },
+        { nameJa: "エルフ", desc: "尖った耳を持つ幻想的な種族", value: "elf" },
+        { nameJa: "魔女", desc: "魔法を使う女性", value: "witch" },
+        { nameJa: "サイボーグ", desc: "体の一部が機械化された人間", value: "cyborg" },
+        { nameJa: "学生", desc: "制服を着た学生", value: "school student" },
+        { nameJa: "メイド", desc: "エプロンドレスを着た奉仕者", value: "maid" },
+        { nameJa: "巫女", desc: "和風の聖職者", value: "miko" }
     ],
     appearance: [
-        { label: "Long Hair", value: "long hair" },
-        { label: "Short Hair", value: "short hair" },
-        { label: "Twin Tails", value: "twintails" },
-        { label: "Ponytail", value: "ponytail" },
-        { label: "Bob Cut", value: "bob cut" },
-        { label: "Hime Cut", value: "hime cut" },
-        { label: "Silver Hair", value: "silver hair" },
-        { label: "Golden Hair", value: "blonde hair" },
-        { label: "Blue Eyes", value: "blue eyes" },
-        { label: "Red Eyes", value: "red eyes" },
-        { label: "Smile", value: "smiling" },
-        { label: "Smirking", value: "smirking" },
-        { label: "Blushing", value: "blushing" },
-        { label: "Pouting", value: "pouting" },
-        { label: "Large Breasts", value: "large breasts" },
-        { label: "Flat Chest", value: "flat chest" },
-        { label: "Beautiful Face", value: "beautiful face" }
+        { nameJa: "ロングヘア", desc: "長い髪の毛", value: "long hair" },
+        { nameJa: "ショートヘア", desc: "短い髪の毛", value: "short hair" },
+        { nameJa: "ツインテール", desc: "左右に結んだ髪型", value: "twintails" },
+        { nameJa: "ポニーテール", desc: "後ろで一つに結んだ髪型", value: "ponytail" },
+        { nameJa: "銀髪", desc: "神秘的な銀色の髪", value: "silver hair" },
+        { nameJa: "青い目", desc: "澄んだ青色の瞳", value: "blue eyes" },
+        { nameJa: "微笑み", desc: "優しく笑う表情", value: "smiling" },
+        { nameJa: "照れ顔", desc: "頬を赤らめた表情", value: "blushing" },
+        { nameJa: "巨乳", desc: "大きな胸の強調", value: "large breasts" },
+        { nameJa: "美少女", desc: "顔立ちの整ったキャラクター", value: "beautiful face" }
     ],
     style: [
-        { label: "Anime Style", value: "anime style" },
-        { label: "Photorealistic", value: "photorealistic" },
-        { label: "Oil Painting", value: "oil painting" },
-        { label: "Cyberpunk", value: "cyberpunk" },
-        { label: "Steampunk", value: "steampunk" },
-        { label: "Fantasy", value: "fantasy" },
-        { label: "Watercolor", value: "watercolor" },
-        { label: "Sketch", value: "sketch" },
-        { label: "Studio Ghibli", value: "studio ghibli style" },
-        { label: "Makoto Shinkai", value: "makoto shinkai style" },
-        { label: "Greg Rutkowski", value: "by greg rutkowski" },
-        { label: "Ukiyo-e", value: "ukiyo-e" },
-        { label: "Pixel Art", value: "pixel art" }
+        { nameJa: "アニメ風", desc: "日本の2Dアニメスタイル", value: "anime style" },
+        { nameJa: "実写風", desc: "写真のようなリアルな質感", value: "photorealistic" },
+        { nameJa: "油絵風", desc: "厚塗りの芸術的なスタイル", value: "oil painting" },
+        { nameJa: "サイバーパンク", desc: "ハイテクで退廃的な未来世界", value: "cyberpunk" },
+        { nameJa: "スチームパンク", desc: "蒸気機関が発達したレトロ未来", value: "steampunk" },
+        { nameJa: "ファンタジー", desc: "魔法と創造の世界", value: "fantasy" },
+        { nameJa: "水彩画風", desc: "透明感のある淡い絵画スタイル", value: "watercolor" },
+        { nameJa: "ジブリ風", desc: "スタジオジブリ作品のような雰囲気", value: "studio ghibli style" },
+        { nameJa: "新海誠風", desc: "光の描写が美しいアニメスタイル", value: "makoto shinkai style" },
+        { nameJa: "ピクセルアート", desc: "懐かしいドット絵風スタイル", value: "pixel art" }
     ],
     tech: [
-        { label: "High Res", value: "highres" },
-        { label: "8K", value: "8k wallpaper" },
-        { label: "Masterpiece", value: "masterpiece" },
-        { label: "Best Quality", value: "best quality" },
-        { label: "Cinematic Lighting", value: "cinematic lighting" },
-        { label: "Soft Lighting", value: "soft lighting" },
-        { label: "Depth of Field", value: "depth of field" },
-        { label: "Ray Tracing", value: "ray tracing" },
-        { label: "Sharp Focus", value: "sharp focus" },
-        { label: "Dynamic Angle", value: "dynamic angle" },
-        { label: "From Below", value: "from below" },
-        { label: "From Above", value: "from above" },
-        { label: "Cowboy Shot", value: "cowboy shot" },
-        { label: "Detailed Background", value: "detailed background" }
+        { nameJa: "高解像度", desc: "きめ細やかな描写", value: "highres" },
+        { nameJa: "8K解像度", desc: "極めて精細な壁紙品質", value: "8k wallpaper" },
+        { nameJa: "傑作", desc: "最高品質の出力（必須級）", value: "masterpiece" },
+        { nameJa: "最高品質", desc: "質感を向上させるタグ", value: "best quality" },
+        { nameJa: "シネマティック照明", desc: "映画のようなドラマチックな光", value: "cinematic lighting" },
+        { nameJa: "被写界深度", desc: "背景をぼかして被写体を際立たせる", value: "depth of field" },
+        { nameJa: "レイトレーシング", desc: "光の反射をリアルに描写", value: "ray tracing" },
+        { nameJa: "シャープフォーカス", desc: "ピントがはっきり合った描写", value: "sharp focus" },
+        { nameJa: "ダイナミックアングル", desc: "変化に富んだ構図", value: "dynamic angle" },
+        { nameJa: "詳細な背景", desc: "背景を描き込みを増やす", value: "detailed background" }
     ],
     scene: [
-        { label: "Forest", value: "forest" },
-        { label: "Cyber City", value: "cyberpunk city background" },
-        { label: "Beach", value: "beach" },
-        { label: "Library", value: "library" },
-        { label: "Space", value: "outer space" },
-        { label: "Classroom", value: "classroom" },
-        { label: "Sunset", value: "sunset" },
-        { label: "Rainy Day", value: "rainy day" },
-        { label: "Ruins", value: "ruins" },
-        { label: "Bedroom", value: "bedroom" },
-        { label: "Cafe", value: "cafe" },
-        { label: "Under Water", value: "underwater" }
+        { nameJa: "森", desc: "自然豊かな森林", value: "forest" },
+        { nameJa: "サイバーシティ", desc: "ネオン輝く未来都市", value: "cyberpunk city background" },
+        { nameJa: "ビーチ", desc: "海辺の風景", value: "beach" },
+        { nameJa: "図書館", desc: "本に囲まれた静かな場所", value: "library" },
+        { nameJa: "宇宙", desc: "星々が輝く外宇宙", value: "outer space" },
+        { nameJa: "教室", desc: "学校の室内", value: "classroom" },
+        { nameJa: "夕焼け", desc: "黄金色の空", value: "sunset" },
+        { nameJa: "雨の日", desc: "しっとりとした雨の風景", value: "rainy day" },
+        { nameJa: "廃墟", desc: "放置された古い建物", value: "ruins" }
     ],
     mature: [
-        { label: "Lingerie", value: "lingerie" },
-        { label: "Swimsuit", value: "swimsuit" },
-        { label: "Bikini", value: "bikini" },
-        { label: "See-through", value: "see-through" },
-        { label: "Spread Legs", value: "spread legs" },
-        { label: "Heart-shaped Pupils", value: "heart-shaped pupils" },
-        { label: "Ahegao", value: "ahegao" },
-        { label: "Naked", value: "naked" },
-        { label: "Oppai", value: "large breasts" }
+        { nameJa: "ランジェリー", desc: "下着姿", value: "lingerie" },
+        { nameJa: "水着", desc: "全身の水着", value: "swimsuit" },
+        { nameJa: "ビキニ", desc: "セパレートの水着", value: "bikini" },
+        { nameJa: "透け感", desc: "服が透けて見える描写", value: "see-through" },
+        { nameJa: "開脚", desc: "足を開いたポーズ", value: "spread legs" },
+        { nameJa: "ハート目", desc: "瞳がハート形に", value: "heart-shaped pupils" },
+        { nameJa: "アヘ顔", desc: "快楽に溺れた表情", value: "ahegao" },
+        { nameJa: "全裸", desc: "何も着ていない状態", value: "naked" }
     ]
 };
-
 
 let selectedTags = new Set();
 let currentCategory = 'character';
@@ -107,36 +83,73 @@ const negPromptText = document.getElementById('negative-prompt-text');
 
 // Initialize
 function init() {
-    renderTags(currentCategory);
+    renderRows(currentCategory);
     setupEventListeners();
 }
 
-function renderTags(category) {
+function renderRows(category) {
     tagContainer.innerHTML = '';
     const tags = TAG_DATA[category];
 
     tags.forEach(tag => {
-        const tagEl = document.createElement('div');
-        tagEl.className = 'tag' + (selectedTags.has(tag.value) ? ' selected' : '');
-        tagEl.textContent = tag.label;
-        tagEl.onclick = () => toggleTag(tag.value);
-        tagContainer.appendChild(tagEl);
+        const tr = document.createElement('tr');
+        if (selectedTags.has(tag.value)) tr.classList.add('selected');
+
+        const isChecked = selectedTags.has(tag.value) ? 'checked' : '';
+
+        tr.innerHTML = `
+            <td class="col-name">
+                <label class="checkbox-container">
+                    <input type="checkbox" data-value="${tag.value}" ${isChecked}>
+                    <span class="checkmark"></span>
+                    ${tag.nameJa}
+                </label>
+            </td>
+            <td class="col-desc">${tag.desc}</td>
+            <td class="col-tag">${tag.value}</td>
+        `;
+
+        // 行全体をクリックしても切り替えられるようにする (チェックボックス以外)
+        tr.onclick = (e) => {
+            if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'LABEL' && e.target.className !== 'checkmark') {
+                const checkbox = tr.querySelector('input');
+                checkbox.checked = !checkbox.checked;
+                toggleTag(tag.value, checkbox.checked);
+            }
+        };
+
+        // チェックボックス自体の変更イベント
+        const checkbox = tr.querySelector('input');
+        checkbox.onchange = (e) => {
+            toggleTag(tag.value, e.target.checked);
+        };
+
+        tagContainer.appendChild(tr);
     });
 }
 
-function toggleTag(value) {
-    if (selectedTags.has(value)) {
-        selectedTags.delete(value);
-    } else {
+function toggleTag(value, isChecked) {
+    if (isChecked) {
         selectedTags.add(value);
+    } else {
+        selectedTags.delete(value);
     }
     updatePrompt();
-    renderTags(currentCategory);
+
+    // 現在表示されているカテゴリの行だけスタイルを更新
+    const rows = tagContainer.querySelectorAll('tr');
+    rows.forEach(row => {
+        const cb = row.querySelector('input');
+        if (cb.dataset.value === value) {
+            if (isChecked) row.classList.add('selected');
+            else row.classList.remove('selected');
+        }
+    });
 }
 
 function updatePrompt() {
     if (selectedTags.size === 0) {
-        promptDisplay.innerHTML = '<span class="placeholder">Click tags below to start building your prompt...</span>';
+        promptDisplay.innerHTML = '<span class="placeholder">下のテーブルから項目を選択してプロンプトを作成してください...</span>';
         return;
     }
 
@@ -145,23 +158,23 @@ function updatePrompt() {
 }
 
 function setupEventListeners() {
-    // Tabs
+    // タブ切り替え
     tabBtns.forEach(btn => {
         btn.onclick = () => {
             tabBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             currentCategory = btn.dataset.category;
-            renderTags(currentCategory);
+            renderRows(currentCategory);
         };
     });
 
-    // Copy Prompt
+    // プロンプトコピー
     copyBtn.onclick = () => {
         const text = promptDisplay.textContent;
-        if (selectedTags.size > 0) {
+        if (selectedTags.size > 0 && !text.includes('下のテーブルから')) {
             navigator.clipboard.writeText(text).then(() => {
                 const originalText = copyBtn.textContent;
-                copyBtn.textContent = 'Copied!';
+                copyBtn.textContent = 'コピー完了！';
                 copyBtn.classList.add('success');
                 setTimeout(() => {
                     copyBtn.textContent = originalText;
@@ -171,17 +184,17 @@ function setupEventListeners() {
         }
     };
 
-    // Clear All
+    // すべてクリア
     clearBtn.onclick = () => {
         selectedTags.clear();
         updatePrompt();
-        renderTags(currentCategory);
+        renderRows(currentCategory);
     };
 
-    // Copy Negative Prompt
+    // ネガティブプロンプトコピー
     copyNegBtn.onclick = () => {
         navigator.clipboard.writeText(negPromptText.textContent).then(() => {
-            copyNegBtn.textContent = 'Copied!';
+            copyNegBtn.textContent = 'コピー完了！';
             setTimeout(() => {
                 copyNegBtn.textContent = 'Copy';
             }, 2000);
