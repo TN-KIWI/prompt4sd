@@ -186,6 +186,7 @@ h3 {
     padding-bottom: 8px;
     scrollbar-width: thin;
     scrollbar-color: var(--accent) transparent;
+    justify-content: flex-start;
 }
 
 .category-tabs::-webkit-scrollbar {
@@ -194,22 +195,21 @@ h3 {
 
 .category-tabs::-webkit-scrollbar-thumb {
     background: var(--accent);
-    border_radius: 2px;
-}
-
-justify-content: center;
+    border-radius: 2px;
 }
 
 .tab-btn {
-    background: transparent;
-    border: none;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--text-muted);
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1.5rem;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 700;
     position: relative;
     transition: var(--transition);
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    white-space: nowrap;
 }
 
 .tab-btn.active {
