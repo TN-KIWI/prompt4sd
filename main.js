@@ -580,12 +580,14 @@ function renderSubTabs() {
 function renderRows() {
     tagContainer.innerHTML = '';
 
-    // Get tags from current sub-category or filter all in main category if searching
+    // Get tags from current sub-category or filter all across all main categories if searching
     let tagsToShow = [];
     if (searchQuery) {
-        // Search across ALL sub-categories in current main category
-        Object.values(TAG_DATA[currentMainCategory]).forEach(subTags => {
-            tagsToShow = tagsToShow.concat(subTags);
+        // Search across ALL main categories and ALL sub-categories
+        Object.values(TAG_DATA).forEach(mainCatData => {
+            Object.values(mainCatData).forEach(subTags => {
+                tagsToShow = tagsToShow.concat(subTags);
+            });
         });
     } else {
         tagsToShow = TAG_DATA[currentMainCategory][currentSubCategory] || [];
